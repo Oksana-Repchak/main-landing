@@ -1,3 +1,8 @@
-body {
-  background-color: rgb(156, 212, 159);
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import "./utils/variables";
+@import "./utils/reset";
+@import "./utils/general";
+@import "./utils/placeholders";
+@import "./utils/common";
+@import "./utils/_text-size";
