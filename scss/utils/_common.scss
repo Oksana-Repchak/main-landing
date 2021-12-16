@@ -12,6 +12,10 @@ button {
   font-family: "Arial", sans-serif;
 }
 
+section {
+  padding-top: 64px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -45,7 +49,7 @@ button {
   background-color: $color_black;
   color: $color_black;
   left: rem(16);
-  bottom: rem(5);
+  bottom: rem(6);
   display: inline-block;
   width: rem(48);
   height: rem(1);

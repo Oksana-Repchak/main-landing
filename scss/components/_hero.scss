@@ -40,7 +40,7 @@
     right: 0;
     display: inline-block;
     width: rem(570);
-    height: rem(587);
+    height: rem(588);
     @media screen and (min-width: rem($tablet_screen)) {
       width: rem(1200);
 
@@ -71,6 +71,14 @@
   }
   & .item:not(:last-child) {
     margin-bottom: rem(32);
+
+    @media screen and (min-width: rem($tablet_screen)) {
+      margin-bottom: 0;
+      margin-right: rem(32);
+    }
+    @media screen and (min-width: rem($desktop_screen)) {
+      margin-right: rem(64);
+    }
   }
 
   @media screen and (min-width: rem($tablet_screen)) {

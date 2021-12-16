@@ -1,0 +1,29 @@
+.about {
+  .container {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
+.about_subtitle {
+  margin-bottom: rem(16);
+
+  @media screen and (max-width: rem($tablet_screen)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.about_title {
+  @media screen and (max-width: rem($tablet_screen)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.about_text {
+  margin-bottom: rem(24);
+
+  @media screen and (max-width: rem($tablet_screen)) {
+    margin-bottom: rem(40);
+  }
+}
