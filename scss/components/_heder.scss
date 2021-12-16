@@ -4,6 +4,10 @@
   background-color: $color_black;
   .container {
     grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
     align-items: center;
     justify-content: space-between;
   }
@@ -34,10 +38,14 @@
   background-color: inherit;
   border: none;
 }
-.heder_button {
-  display: none;
 
-  @media screen and (min-width: rem($tablet_screen)) {
-    display: block;
+.heder {
+  .button_black {
+    display: none;
+
+    @media screen and (min-width: rem($tablet_screen)) {
+      display: block;
+      min-width: rem(190);
+    }
   }
 }

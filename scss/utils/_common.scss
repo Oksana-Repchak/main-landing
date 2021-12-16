@@ -15,8 +15,8 @@ button {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: rem(16);
+  padding-right: rem(16);
   min-height: inherit;
 
   width: rem($mobile_screen);

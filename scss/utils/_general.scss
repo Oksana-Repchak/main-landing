@@ -105,7 +105,7 @@ button {
 }
 
 :-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: rem(1) dotted ButtonText;
 }
 
 :-moz-ui-invalid {
@@ -127,7 +127,7 @@ progress {
 
 [type="search"] {
   -webkit-appearance: textfield;
-  outline-offset: -2px;
+  outline-offset: -rem(2);
 }
 
 ::-webkit-search-decoration {

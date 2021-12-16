@@ -17,7 +17,7 @@ a {
 
 input {
   padding: 0;
-  border-width: 1px;
+  border-width: rem(1);
 }
 
 button {
@@ -128,7 +128,7 @@ button {
 }
 
 :-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0.0625rem dotted ButtonText;
 }
 
 :-moz-ui-invalid {
@@ -150,7 +150,7 @@ progress {
 
 [type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px;
+  outline-offset: -rem(2);
 }
 
 ::-webkit-search-decoration {
@@ -175,8 +175,8 @@ summary {
 .button_black, .button_orange {
   margin: 0;
   border: transparent;
-  border-radius: 8px;
-  padding: 12px 36px;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2.25rem;
   text-align: center;
   transition: all 1s ease;
 }
@@ -198,8 +198,8 @@ button {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   min-height: inherit;
   width: 22.5rem;
 }
@@ -308,6 +308,11 @@ button {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 48rem) {
+  .heder .container {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
 
 .heder_logo {
   width: 8.875rem;
@@ -336,12 +341,13 @@ button {
   border: none;
 }
 
-.heder_button {
+.heder .button_black {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .heder_button {
+  .heder .button_black {
     display: block;
+    min-width: 11.875rem;
   }
 }
 
@@ -361,6 +367,9 @@ button {
   color: #ffffff;
   list-style: url("../../images/list_elipse.svg");
 }
+.hero_list .item {
+  padding-left: 1rem;
+}
 .hero_list .item:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -377,18 +386,18 @@ button {
 .button_orange:hover, .button_orange:focus {
   color: #e85e23;
   background-color: #ffffff;
-  border: 1px solid #e85e23;
+  border: 0.0625rem solid #e85e23;
 }
 
 .button_black {
-  border: 1px solid #e85e23;
+  border: 0.0625rem solid #e85e23;
   color: #e85e23;
   background-color: #111111;
 }
 .button_black:hover, .button_black:focus {
   color: #ffffff;
   background-color: #e85e23;
-  border: 1px solid #e85e23;
+  border: 0.0625rem solid #e85e23;
 }
 
 /*# sourceMappingURL=style.css.map */
