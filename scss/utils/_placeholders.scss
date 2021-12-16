@@ -9,3 +9,14 @@
   margin-top: 0;
   text-decoration: none;
 }
+
+%button {
+  margin: 0;
+  border: transparent;
+  border-radius: 8px;
+  padding: 12px 36px;
+
+  text-align: center;
+
+  transition: all 1s ease;
+}

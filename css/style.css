@@ -166,11 +166,25 @@ summary {
   display: list-item;
 }
 
+.hero_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button_black, .button_orange {
+  margin: 0;
+  border: transparent;
+  border-radius: 8px;
+  padding: 12px 36px;
+  text-align: center;
+  transition: all 1s ease;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  background-color: #92e4e4;
 }
 
 h1,
@@ -182,11 +196,10 @@ button {
 }
 
 .container {
-  border: solid;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   min-height: inherit;
   width: 22.5rem;
 }
@@ -199,6 +212,10 @@ button {
   .container {
     width: 120rem;
   }
+}
+
+.make_grid {
+  display: grid;
 }
 
 .text_12 {
@@ -279,6 +296,99 @@ button {
 .text_116 {
   font-size: 7.25rem;
   line-height: 7.25rem;
+}
+
+.heder {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #111111;
+}
+.heder .container {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heder_logo {
+  width: 8.875rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 120rem) {
+  .heder_logo {
+    width: 12.5rem;
+    height: 3.5rem;
+  }
+}
+
+.language_dropdown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language_img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.language_select {
+  color: #ffffff;
+  background-color: inherit;
+  border: none;
+}
+
+.heder_button {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .heder_button {
+    display: block;
+  }
+}
+
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 5.625rem;
+  background-color: #111111;
+}
+
+.hero_title {
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.hero_list {
+  margin-bottom: 3rem;
+  color: #ffffff;
+  list-style: url("../../images/list_elipse.svg");
+}
+.hero_list .item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_orange {
+  color: #ffffff;
+  background-color: #e85e23;
+}
+.button_orange:hover, .button_orange:focus {
+  color: #e85e23;
+  background-color: #ffffff;
+  border: 1px solid #e85e23;
+}
+
+.button_black {
+  border: 1px solid #e85e23;
+  color: #e85e23;
+  background-color: #111111;
+}
+.button_black:hover, .button_black:focus {
+  color: #ffffff;
+  background-color: #e85e23;
+  border: 1px solid #e85e23;
 }
 
 /*# sourceMappingURL=style.css.map */

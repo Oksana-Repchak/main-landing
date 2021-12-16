@@ -1,0 +1,56 @@
+.hero {
+  padding-top: rem(64);
+  padding-bottom: rem(90);
+
+  background-color: $color_black;
+}
+
+.hero_title {
+  margin-bottom: rem(48);
+  color: $color_white;
+}
+
+.hero_list {
+  @extend %list;
+  margin-bottom: rem(48);
+  color: $color_white;
+  list-style: url("../../images/list_elipse.svg");
+
+  & .item:not(:last-child) {
+    margin-bottom: rem(32);
+  }
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_orange {
+  @extend %button;
+
+  color: $color_white;
+  background-color: $accent_color;
+
+  &:hover,
+  &:focus {
+    color: $accent_color;
+    background-color: $color_white;
+    border: 1px solid $accent_color;
+  }
+}
+
+.button_black {
+  @extend %button;
+
+  border: 1px solid $accent_color;
+  color: $accent_color;
+  background-color: $color_black;
+
+  &:hover,
+  &:focus {
+    color: $color_white;
+    background-color: $accent_color;
+    border: 1px solid $accent_color;
+  }
+}

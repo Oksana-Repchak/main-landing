@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  background-color: rgb(146, 228, 228);
 }
 
 h1,
@@ -14,12 +13,10 @@ button {
 }
 
 .container {
-  border: solid;
-
   margin-left: auto;
   margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   min-height: inherit;
 
   width: rem($mobile_screen);
@@ -30,4 +27,8 @@ button {
   @media screen and (min-width: rem($desktop_screen)) {
     width: rem($desktop_screen);
   }
+}
+
+.make_grid {
+  display: grid;
 }

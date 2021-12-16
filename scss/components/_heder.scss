@@ -1,0 +1,43 @@
+.heder {
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  background-color: $color_black;
+  .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.heder_logo {
+  width: rem(142);
+  height: rem(40);
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    width: rem(200);
+    height: rem(56);
+  }
+}
+
+.language_dropdown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language_img {
+  width: rem(20);
+  height: rem(20);
+}
+
+.language_select {
+  color: $color_white;
+  background-color: inherit;
+  border: none;
+}
+.heder_button {
+  display: none;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: block;
+  }
+}
