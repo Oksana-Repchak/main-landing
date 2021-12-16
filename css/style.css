@@ -168,7 +168,7 @@ summary {
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.5;
   background-color: #92e4e4;
 }
@@ -191,6 +191,10 @@ body {
   .container {
     width: 120rem;
   }
+}
+
+.font_family {
+  font-family: Montserrat, sans-serif;
 }
 
 .text_12 {
