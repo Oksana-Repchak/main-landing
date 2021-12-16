@@ -38,3 +38,15 @@ button {
 .make_center {
   justify-content: center;
 }
+
+.title_line::after {
+  position: relative;
+  content: "";
+  background-color: $color_black;
+  color: $color_black;
+  left: rem(16);
+  bottom: rem(5);
+  display: inline-block;
+  width: rem(48);
+  height: rem(1);
+}
