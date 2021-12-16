@@ -7,6 +7,7 @@
 
     @media screen and (min-width: rem($tablet_screen)) {
       grid-template-columns: 2fr 1fr 1fr;
+      grid-column-gap: rem(48);
     }
     align-items: center;
     justify-content: space-between;

@@ -150,7 +150,7 @@ progress {
 
 [type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -rem(2);
+  outline-offset: -0.125rem;
 }
 
 ::-webkit-search-decoration {
@@ -178,7 +178,7 @@ summary {
   border-radius: 0.5rem;
   padding: 0.75rem 2.25rem;
   text-align: center;
-  transition: all 1s ease;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 body {
@@ -216,6 +216,10 @@ button {
 
 .make_grid {
   display: grid;
+}
+
+.make_center {
+  justify-content: center;
 }
 
 .text_12 {
@@ -311,6 +315,7 @@ button {
 @media screen and (min-width: 48rem) {
   .heder .container {
     grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 3rem;
   }
 }
 

@@ -18,5 +18,6 @@
 
   text-align: center;
 
-  transition: all 1s ease;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border 0.2s ease-in-out;
 }

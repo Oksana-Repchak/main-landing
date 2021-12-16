@@ -127,7 +127,7 @@ progress {
 
 [type="search"] {
   -webkit-appearance: textfield;
-  outline-offset: -rem(2);
+  outline-offset: rem(-2);
 }
 
 ::-webkit-search-decoration {
