@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   padding-top: rem(64);
   padding-bottom: rem(90);
 
@@ -15,12 +16,17 @@
     position: absolute;
     z-index: 10;
     content: "";
+    top: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    top: rem(60);
     display: inline-block;
-    width: rem(530);
-    height: rem(600);
+    width: rem(430);
+    @media screen and (min-width: rem($tablet_screen)) {
+      height: rem(570);
+    }
+    @media screen and (min-width: rem($desktop_screen)) {
+      height: rem(620);
+    }
     background-image: url(../../images/pattern_hero1.png);
   }
 
@@ -30,11 +36,19 @@
     content: "";
     background-size: cover;
     background-repeat: no-repeat;
-    top: rem(-490);
+    top: 0;
     right: 0;
     display: inline-block;
-    width: rem(1200);
-    height: rem(1200);
+    width: rem(570);
+    height: rem(587);
+    @media screen and (min-width: rem($tablet_screen)) {
+      width: rem(1200);
+
+      height: rem(570);
+    }
+    @media screen and (min-width: rem($desktop_screen)) {
+      height: rem(620);
+    }
     background-image: url(../../images/pattern_hero2.png);
   }
 }
@@ -46,6 +60,8 @@
 
 .hero_list {
   @extend %list;
+  position: relative;
+  z-index: 11;
   margin-bottom: rem(48);
   color: $color_white;
   list-style: url("../../images/list_elipse.svg");
@@ -63,6 +79,8 @@
 }
 
 .button_wrapper {
+  position: relative;
+  z-index: 11;
   justify-self: start;
 
   .button_orange {

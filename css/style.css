@@ -358,6 +358,7 @@ button {
 }
 
 .hero {
+  position: relative;
   padding-top: 4rem;
   padding-bottom: 5.625rem;
   background-color: #111111;
@@ -371,13 +372,22 @@ button {
   position: absolute;
   z-index: 10;
   content: "";
+  top: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  top: 3.75rem;
   display: inline-block;
-  width: 33.125rem;
-  height: 37.5rem;
+  width: 26.875rem;
   background-image: url(../../images/pattern_hero1.png);
+}
+@media screen and (min-width: 48rem) {
+  .hero::before {
+    height: 35.625rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .hero::before {
+    height: 38.75rem;
+  }
 }
 .hero::after {
   position: absolute;
@@ -385,12 +395,23 @@ button {
   content: "";
   background-size: cover;
   background-repeat: no-repeat;
-  top: -30.625rem;
+  top: 0;
   right: 0;
   display: inline-block;
-  width: 75rem;
-  height: 75rem;
+  width: 35.625rem;
+  height: 36.6875rem;
   background-image: url(../../images/pattern_hero2.png);
+}
+@media screen and (min-width: 48rem) {
+  .hero::after {
+    width: 75rem;
+    height: 35.625rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .hero::after {
+    height: 38.75rem;
+  }
 }
 
 .hero_title {
@@ -399,6 +420,8 @@ button {
 }
 
 .hero_list {
+  position: relative;
+  z-index: 11;
   margin-bottom: 3rem;
   color: #ffffff;
   list-style: url("../../images/list_elipse.svg");
@@ -416,6 +439,8 @@ button {
 }
 
 .button_wrapper {
+  position: relative;
+  z-index: 11;
   justify-self: start;
 }
 .button_wrapper .button_orange {
