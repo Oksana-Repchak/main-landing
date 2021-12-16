@@ -3,6 +3,40 @@
   padding-bottom: rem(90);
 
   background-color: $color_black;
+
+  & .container {
+    grid-template-columns: 1fr;
+
+    justify-content: start;
+    justify-items: center;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: rem(60);
+    display: inline-block;
+    width: rem(530);
+    height: rem(600);
+    background-image: url(../../images/pattern_hero1.png);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: rem(-490);
+    right: 0;
+    display: inline-block;
+    width: rem(1200);
+    height: rem(1200);
+    background-image: url(../../images/pattern_hero2.png);
+  }
 }
 
 .hero_title {
@@ -22,11 +56,21 @@
   & .item:not(:last-child) {
     margin-bottom: rem(32);
   }
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: flex;
+  }
 }
 
 .button_wrapper {
-  display: flex;
-  justify-content: space-between;
+  justify-self: start;
+
+  .button_orange {
+    margin-right: rem(12);
+    @media screen and (min-width: rem($tablet_screen)) {
+      margin-right: rem(32);
+    }
+  }
 }
 
 .button_orange {
@@ -40,6 +84,10 @@
     color: $accent_color;
     background-color: $color_white;
     border: rem(1) solid $accent_color;
+  }
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    min-width: rem(200);
   }
 }
 
@@ -55,5 +103,9 @@
     color: $color_white;
     background-color: $accent_color;
     border: rem(1) solid $accent_color;
+  }
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    min-width: rem(190);
   }
 }

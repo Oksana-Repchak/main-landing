@@ -26,6 +26,8 @@ button {
   }
   @media screen and (min-width: rem($desktop_screen)) {
     width: rem($desktop_screen);
+    padding-left: rem(464);
+    padding-right: rem(464);
   }
 }
 

@@ -2,6 +2,7 @@
   padding-top: rem(16);
   padding-bottom: rem(16);
   background-color: $color_black;
+
   .container {
     grid-template-columns: 1fr 1fr;
 
@@ -12,9 +13,18 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .button_black {
+    display: none;
+
+    @media screen and (min-width: rem($tablet_screen)) {
+      display: block;
+      min-width: rem(190);
+    }
+  }
 }
 
-.heder_logo {
+.heder_logo_img {
   width: rem(142);
   height: rem(40);
 
@@ -38,15 +48,4 @@
   color: $color_white;
   background-color: inherit;
   border: none;
-}
-
-.heder {
-  .button_black {
-    display: none;
-
-    @media screen and (min-width: rem($tablet_screen)) {
-      display: block;
-      min-width: rem(190);
-    }
-  }
 }

@@ -211,6 +211,8 @@ button {
 @media screen and (min-width: 120rem) {
   .container {
     width: 120rem;
+    padding-left: 29rem;
+    padding-right: 29rem;
   }
 }
 
@@ -318,13 +320,22 @@ button {
     grid-column-gap: 3rem;
   }
 }
+.heder .button_black {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .heder .button_black {
+    display: block;
+    min-width: 11.875rem;
+  }
+}
 
-.heder_logo {
+.heder_logo_img {
   width: 8.875rem;
   height: 2.5rem;
 }
 @media screen and (min-width: 120rem) {
-  .heder_logo {
+  .heder_logo_img {
     width: 12.5rem;
     height: 3.5rem;
   }
@@ -346,20 +357,40 @@ button {
   border: none;
 }
 
-.heder .button_black {
-  display: none;
-}
-@media screen and (min-width: 48rem) {
-  .heder .button_black {
-    display: block;
-    min-width: 11.875rem;
-  }
-}
-
 .hero {
   padding-top: 4rem;
   padding-bottom: 5.625rem;
   background-color: #111111;
+}
+.hero .container {
+  grid-template-columns: 1fr;
+  justify-content: start;
+  justify-items: center;
+}
+.hero::before {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 3.75rem;
+  display: inline-block;
+  width: 33.125rem;
+  height: 37.5rem;
+  background-image: url(../../images/pattern_hero1.png);
+}
+.hero::after {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -30.625rem;
+  right: 0;
+  display: inline-block;
+  width: 75rem;
+  height: 75rem;
+  background-image: url(../../images/pattern_hero2.png);
 }
 
 .hero_title {
@@ -378,10 +409,22 @@ button {
 .hero_list .item:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 48rem) {
+  .hero_list {
+    display: flex;
+  }
+}
 
 .button_wrapper {
-  display: flex;
-  justify-content: space-between;
+  justify-self: start;
+}
+.button_wrapper .button_orange {
+  margin-right: 0.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .button_wrapper .button_orange {
+    margin-right: 2rem;
+  }
 }
 
 .button_orange {
@@ -393,6 +436,11 @@ button {
   background-color: #ffffff;
   border: 0.0625rem solid #e85e23;
 }
+@media screen and (min-width: 48rem) {
+  .button_orange {
+    min-width: 12.5rem;
+  }
+}
 
 .button_black {
   border: 0.0625rem solid #e85e23;
@@ -403,6 +451,11 @@ button {
   color: #ffffff;
   background-color: #e85e23;
   border: 0.0625rem solid #e85e23;
+}
+@media screen and (min-width: 48rem) {
+  .button_black {
+    min-width: 11.875rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
