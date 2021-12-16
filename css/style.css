@@ -211,6 +211,12 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+@media screen and (min-width: 120rem) {
+  .text_16 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 .text_18 {
   font-size: 1.125rem;
@@ -226,15 +232,39 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+@media screen and (min-width: 120rem) {
+  .text_24.desktop {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
 
 .text_32 {
   font-size: 2rem;
   line-height: 2.5rem;
 }
+@media screen and (min-width: 120rem) {
+  .text_32 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
 
 .text_36 {
   font-size: 2.25rem;
   line-height: 2.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .text_36 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .text_36 {
+    font-size: 7.25rem;
+    line-height: 7.25rem;
+  }
 }
 
 .text_80 {
