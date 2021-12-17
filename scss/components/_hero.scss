@@ -27,7 +27,7 @@
     @media screen and (min-width: rem($desktop_screen)) {
       height: rem(620);
     }
-    background-image: url(../../images/pattern_hero1.png);
+    background-image: url(./../images/pattern_hero1.png);
   }
 
   &::after {
@@ -49,7 +49,7 @@
     @media screen and (min-width: rem($desktop_screen)) {
       height: rem(620);
     }
-    background-image: url(../../images/pattern_hero2.png);
+    background-image: url(./../images/pattern_hero2.png);
   }
 }
 
@@ -68,16 +68,17 @@
 
   .item {
     padding-left: rem(16);
-  }
-  .item:not(:last-child) {
-    margin-bottom: rem(32);
 
-    @media screen and (min-width: rem($tablet_screen)) {
-      margin-bottom: 0;
-      margin-right: rem(32);
-    }
-    @media screen and (min-width: rem($desktop_screen)) {
-      margin-right: rem(64);
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+
+      @media screen and (min-width: rem($tablet_screen)) {
+        margin-bottom: 0;
+        margin-right: rem(32);
+      }
+      @media screen and (min-width: rem($desktop_screen)) {
+        margin-right: rem(64);
+      }
     }
   }
 

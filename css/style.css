@@ -214,7 +214,7 @@ section {
 @media screen and (min-width: 120rem) {
   .container {
     width: 120rem;
-    padding: 0 29rem;
+    padding: 0 21.25rem;
   }
 }
 
@@ -391,7 +391,7 @@ section {
   background-repeat: no-repeat;
   display: inline-block;
   width: 26.875rem;
-  background-image: url(../../images/pattern_hero1.png);
+  background-image: url(./../images/pattern_hero1.png);
 }
 @media screen and (min-width: 48rem) {
   .hero::before {
@@ -414,7 +414,7 @@ section {
   display: inline-block;
   width: 35.625rem;
   height: 36.75rem;
-  background-image: url(../../images/pattern_hero2.png);
+  background-image: url(./../images/pattern_hero2.png);
 }
 @media screen and (min-width: 48rem) {
   .hero::after {
@@ -555,7 +555,7 @@ section {
 }
 
 .ideas_list {
-  max-width: 14.25rem;
+  max-width: 16.5rem;
   margin-left: auto;
 }
 @media screen and (min-width: 48rem) {
@@ -592,7 +592,7 @@ section {
 .ideas_list .ideas_number {
   position: absolute;
   z-index: -1;
-  bottom: 0;
+  bottom: 1.25rem;
   right: 11.875rem;
   font-family: Arial;
   font-style: normal;
