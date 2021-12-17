@@ -13,14 +13,12 @@ button {
 }
 
 section {
-  padding-top: 64px;
+  padding-top: rem(64);
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: rem(16);
-  padding-right: rem(16);
+  margin: 0 auto;
+  padding: 0 rem(16);
   min-height: inherit;
 
   width: rem($mobile_screen);
@@ -30,8 +28,7 @@ section {
   }
   @media screen and (min-width: rem($desktop_screen)) {
     width: rem($desktop_screen);
-    padding-left: rem(464);
-    padding-right: rem(464);
+    padding: 0 rem(464);
   }
 }
 

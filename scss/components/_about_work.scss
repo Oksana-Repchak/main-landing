@@ -1,0 +1,39 @@
+.work_list_item {
+  &.make_grid {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: rem(48);
+  }
+}
+
+.about_work_title {
+  @media screen and (max-width: rem(766)) {
+    margin-bottom: rem(24);
+  }
+}
+
+.description_list {
+  margin-bottom: rem(24);
+  list-style: url("./../images/list_elipse.svg");
+
+  .item {
+    padding-left: rem(16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+}
+
+.about_work_img {
+  margin: 0 -16px;
+  width: 100vw;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    grid-column: 2/2;
+  }
+}

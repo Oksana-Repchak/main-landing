@@ -64,12 +64,12 @@
   z-index: 11;
   margin-bottom: rem(48);
   color: $color_white;
-  list-style: url("../../images/list_elipse.svg");
+  list-style: url("./../images/list_elipse.svg");
 
-  & .item {
+  .item {
     padding-left: rem(16);
   }
-  & .item:not(:last-child) {
+  .item:not(:last-child) {
     margin-bottom: rem(32);
 
     @media screen and (min-width: rem($tablet_screen)) {
