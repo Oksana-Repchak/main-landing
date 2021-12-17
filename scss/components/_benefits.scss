@@ -1,0 +1,58 @@
+.benefits {
+  .make_grid {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: rem(32);
+    }
+  }
+
+  .wrapper {
+    @media screen and (min-width: rem($tablet_screen)) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: rem(32);
+      row-gap: rem(24);
+    }
+
+    @media screen and (min-width: rem($desktop_screen)) {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: rem(80);
+    }
+  }
+}
+
+.benefits_subtitle {
+  margin-bottom: rem(16);
+}
+
+.benefits_title {
+  @media screen and (max-width: rem(766)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.benefits_explanation {
+  margin-bottom: rem(24);
+}
+
+.description {
+  margin-bottom: rem(24);
+}
+
+.number_wrapper {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: rem(766)) {
+    margin-bottom: rem(24);
+  }
+
+  &.margin_0 {
+    margin-bottom: 0;
+  }
+}
+
+.number_black {
+  margin-right: rem(18);
+  font-family: Arial;
+  font-weight: 700;
+}
