@@ -5,7 +5,7 @@
 
   background-color: $color_black;
 
-  & .container {
+  .container {
     grid-template-columns: 1fr;
 
     justify-content: start;

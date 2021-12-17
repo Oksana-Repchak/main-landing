@@ -1,0 +1,88 @@
+.contact_us {
+  .container {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: 32px;
+    }
+
+    .title_line::after {
+      background-color: $color_white;
+    }
+  }
+}
+
+.contact_us_form {
+  margin-bottom: rem(24);
+}
+
+.contact_us {
+  background-color: $color_black;
+}
+
+.contact_us_subtitle {
+  @media screen and (max-width: rem($tablet_screen - 2)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.contact_us_title {
+  font-weight: 400;
+  margin-bottom: rem(32);
+}
+
+.list_input {
+  margin-bottom: rem(32);
+  .form_label {
+    display: block;
+    &:first-child {
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.text_label {
+  display: inline-block;
+  margin-bottom: rem(16);
+}
+
+.form_input {
+  display: block;
+  padding: rem(8) rem(8) rem(8) 0;
+  width: 100%;
+  background-color: inherit;
+  border: 1px solid transparent;
+  border-bottom-color: $color_white;
+  color: $color_white;
+  transition: border-bottom-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-bottom-color: $text_color;
+  }
+}
+
+.form_button {
+  @extend %button;
+  width: 100%;
+  padding: rem(12) rem(56);
+  color: $color_white;
+  background-color: $accent_color;
+
+  &:hover,
+  &:focus {
+    color: $accent_color;
+    background-color: $color_white;
+    border: rem(1) solid $accent_color;
+  }
+}
+
+.form_consent {
+  max-width: rem(304);
+  color: #c4c4c4;
+
+  .accent {
+    color: $accent_color;
+  }
+}

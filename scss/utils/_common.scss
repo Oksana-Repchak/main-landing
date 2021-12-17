@@ -13,7 +13,7 @@ button {
 }
 
 section {
-  padding-top: rem(64);
+  padding: rem(64);
 }
 
 .container {
@@ -44,10 +44,13 @@ section {
   position: relative;
   content: "";
   background-color: $color_black;
-  color: $color_black;
   left: rem(16);
   bottom: rem(6);
   display: inline-block;
   width: rem(48);
   height: rem(1);
+}
+
+.invers_text {
+  color: #fff;
 }
