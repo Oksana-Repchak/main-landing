@@ -13,7 +13,7 @@ button {
 }
 
 section {
-  padding: rem(64);
+  padding: rem(64) 0 rem(64) 0;
 }
 
 .container {
@@ -35,6 +35,10 @@ section {
 .make_grid {
   display: grid;
 }
+
+// .make_flex {
+//   display: flex;
+// }
 
 .make_center {
   justify-content: center;

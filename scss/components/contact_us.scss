@@ -2,7 +2,7 @@
   .container {
     @media screen and (min-width: rem($tablet_screen)) {
       grid-template-columns: 1fr 2fr;
-      column-gap: 32px;
+      column-gap: rem(32);
     }
 
     .title_line::after {
@@ -12,7 +12,17 @@
 }
 
 .contact_us_form {
-  margin-bottom: rem(24);
+  @media screen and (min-width: rem($tablet_screen)) and (max-width: rem($desktop_screen)) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 0fr;
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .contact_us {
@@ -32,10 +42,41 @@
 
 .list_input {
   margin-bottom: rem(32);
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: flex;
+    // justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
   .form_label {
     display: block;
+
     &:first-child {
       margin-bottom: rem(24);
+    }
+
+    @media screen and (min-width: rem($tablet_screen)) {
+      &:first-child {
+        margin-bottom: 0;
+        margin-right: rem(24);
+      }
+      &:last-child {
+        min-width: rem(240);
+      }
+    }
+
+    @media screen and (min-width: rem($desktop_screen)) {
+      margin-right: rem(40);
+
+      &:first-child {
+        min-width: rem(240);
+        margin-right: rem(40);
+      }
+      &:last-child {
+        min-width: rem(272);
+      }
     }
   }
 }
@@ -66,7 +107,7 @@
 .form_button {
   @extend %button;
   width: 100%;
-  padding: rem(12) rem(56);
+  margin-bottom: rem(24);
   color: $color_white;
   background-color: $accent_color;
 
@@ -76,11 +117,38 @@
     background-color: $color_white;
     border: rem(1) solid $accent_color;
   }
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: 0;
+    max-width: rem(200);
+
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    margin-right: 0;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    align-self: center;
+    justify-self: end;
+  }
 }
 
 .form_consent {
   max-width: rem(304);
   color: #c4c4c4;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    max-width: rem(224);
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  @media screen and (min-width: rem($desktop_screen)) {
+    max-width: none;
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
 
   .accent {
     color: $accent_color;
