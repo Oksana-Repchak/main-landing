@@ -1,0 +1,201 @@
+.subscription_plans_wrapper {
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: rem(32);
+  }
+  @media screen and (min-width: rem($desktop_screen)) {
+    margin-bottom: rem(160);
+  }
+}
+.sub_plans_subtitle {
+  margin-bottom: rem(16);
+}
+
+.sub_plans_title {
+  margin-bottom: rem(64);
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: 0;
+  }
+}
+
+.sub_plans_list {
+  max-width: rem(264);
+  margin-left: auto;
+  margin-bottom: rem(64);
+  text-align: left;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    max-width: rem(400);
+    margin-top: rem(16);
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(88);
+    row-gap: rem(100);
+    margin-left: rem(56);
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
+.plans_item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: rem(56);
+
+    @media screen and (min-width: rem($desktop_screen)) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.plans_number {
+  @extend %absolute_number;
+  bottom: rem(56);
+  right: rem(190);
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    left: rem(-56);
+    bottom: rem(16);
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    top: rem(-32);
+  }
+}
+
+// _________card___________
+
+.plans_cards {
+  text-align: center;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.card {
+  max-width: rem(320);
+  padding: rem(24);
+  border: rem(1) solid #c4c4c4;
+  border-radius: rem(6);
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    padding: rem(48) rem(56);
+
+    max-width: rem(392);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+
+    @media screen and (min-width: rem($desktop_screen)) {
+      margin-bottom: 0;
+      margin-right: rem(32);
+    }
+  }
+}
+
+.card_title {
+  margin-bottom: rem(16);
+  color: $color_subtitle;
+}
+
+.payment_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price {
+  color: $color_subtitle;
+  font-weight: 500;
+  font-size: rem(32);
+  line-height: rem(32);
+
+  .price_dollar {
+    font-size: rem(14);
+    line-height: rem(14);
+  }
+
+  .price_sub {
+    vertical-align: super;
+    font-size: rem(16);
+    line-height: rem(32);
+  }
+}
+
+.price_per {
+  margin-bottom: rem(32);
+  font-size: rem(12);
+  line-height: rem(20);
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: rem(40);
+  }
+}
+
+.card_list {
+  text-align: left;
+
+  margin-bottom: rem(16);
+  padding: 0 rem(32);
+  list-style: url("./../images/list_elipse_outline.svg");
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: rem(40);
+    padding: 0 rem(24);
+  }
+
+  .item {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+}
+
+.card_button {
+  @extend %button;
+  min-width: rem(200);
+  margin-bottom: rem(24);
+  color: $color_white;
+  background-color: $accent_color;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: rem(36);
+  }
+}
+
+.payment {
+  font-size: rem(12);
+  line-height: rem(20);
+}
+
+.payment_price {
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: rem(32);
+
+  .payment_price_dollar {
+    font-size: rem(14);
+    line-height: rem(14);
+  }
+
+  .payment_price_sub {
+    vertical-align: super;
+
+    font-size: rem(10);
+    line-height: rem(12);
+  }
+}

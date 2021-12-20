@@ -36,30 +36,24 @@
 
   .ideas_item {
     position: relative;
-  }
 
-  .ideas_item:not(:last-child) {
-    margin-bottom: rem(64);
+    &:not(:last-child) {
+      margin-bottom: rem(64);
 
-    @media screen and (min-width: rem($tablet_screen)) {
-      margin-bottom: rem(92);
-    }
+      @media screen and (min-width: rem($tablet_screen)) {
+        margin-bottom: rem(92);
+      }
 
-    @media screen and (min-width: rem($desktop_screen)) {
-      margin-bottom: 0;
+      @media screen and (min-width: rem($desktop_screen)) {
+        margin-bottom: 0;
+      }
     }
   }
 
   .ideas_number {
-    position: absolute;
-    z-index: -1;
+    @extend %absolute_number;
     bottom: rem(20);
     right: rem(190);
-
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 700;
-    color: $text_color_light;
 
     @media screen and (min-width: rem($tablet_screen)) {
       right: rem(340);

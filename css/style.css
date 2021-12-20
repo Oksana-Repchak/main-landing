@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');");
 /* Additional resets */
 h1,
 h2,
@@ -172,14 +172,26 @@ summary {
   list-style: none;
 }
 
-.form_button, .button_black, .button_orange {
+.card_button, .form_button, .button_black, .button_orange {
   margin: 0;
-  border: transparent;
+  border: none;
+  box-shadow: 0px 0px 0px 0px;
   cursor: pointer;
   border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 2.25rem;
   text-align: center;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.plans_number, .ideas_list .ideas_number {
+  position: absolute;
+  z-index: -1;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 700;
+  color: #f4f4f4;
+  font-size: 7.25rem;
+  line-height: 7.25rem;
 }
 
 body {
@@ -314,11 +326,6 @@ section {
 .text_80 {
   font-size: 5rem;
   line-height: 5rem;
-}
-
-.text_116 {
-  font-size: 7.25rem;
-  line-height: 7.25rem;
 }
 
 .heder {
@@ -595,14 +602,8 @@ section {
   }
 }
 .ideas_list .ideas_number {
-  position: absolute;
-  z-index: -1;
   bottom: 1.25rem;
   right: 11.875rem;
-  font-family: Arial;
-  font-style: normal;
-  font-weight: 700;
-  color: #f4f4f4;
 }
 @media screen and (min-width: 48rem) {
   .ideas_list .ideas_number {
@@ -800,7 +801,7 @@ section {
   padding: 0.5rem 0.5rem 0.5rem 0;
   width: 100%;
   background-color: inherit;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   border-bottom-color: #ffffff;
   color: #ffffff;
   transition: border-bottom-color 0.2s ease-in-out;
@@ -819,7 +820,7 @@ section {
 .form_button:hover, .form_button:focus {
   color: #e85e23;
   background-color: #ffffff;
-  border: 0.0625rem solid #e85e23;
+  box-shadow: 0 0 0.0625rem 0.0625rem #e85e23;
 }
 @media screen and (min-width: 48rem) {
   .form_button {
@@ -848,6 +849,7 @@ section {
     max-width: 14rem;
     grid-row-start: 2;
     grid-column-start: 2;
+    align-self: center;
   }
 }
 @media screen and (min-width: 120rem) {
@@ -859,6 +861,209 @@ section {
 }
 .form_consent .accent {
   color: #e85e23;
+}
+
+@media screen and (min-width: 48rem) {
+  .subscription_plans_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .subscription_plans_wrapper {
+    margin-bottom: 10rem;
+  }
+}
+
+.sub_plans_subtitle {
+  margin-bottom: 1rem;
+}
+
+.sub_plans_title {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .sub_plans_title {
+    margin-bottom: 0;
+  }
+}
+
+.sub_plans_list {
+  max-width: 16.5rem;
+  margin-left: auto;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+@media screen and (min-width: 48rem) {
+  .sub_plans_list {
+    max-width: 25rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .sub_plans_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5.5rem;
+    row-gap: 6.25rem;
+    margin-left: 3.5rem;
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
+.plans_item {
+  position: relative;
+}
+.plans_item:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+@media screen and (min-width: 120rem) {
+  .plans_item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.plans_number {
+  bottom: 3.5rem;
+  right: 11.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .plans_number {
+    left: -3.5rem;
+    bottom: 1rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .plans_number {
+    top: -2rem;
+  }
+}
+
+.plans_cards {
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .plans_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .plans_cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.card {
+  max-width: 20rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid #c4c4c4;
+  border-radius: 0.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .card {
+    padding: 3rem 3.5rem;
+    max-width: 24.5rem;
+  }
+}
+.card:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 120rem) {
+  .card:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+
+.card_title {
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.payment_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price {
+  color: #333333;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.price .price_dollar {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+.price .price_sub {
+  vertical-align: super;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.price_per {
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .price_per {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.card_list {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+  list-style: url("./../images/list_elipse_outline.svg");
+}
+@media screen and (min-width: 48rem) {
+  .card_list {
+    margin-bottom: 2.5rem;
+    padding: 0 1.5rem;
+  }
+}
+.card_list .item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.card_button {
+  min-width: 12.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background-color: #e85e23;
+}
+@media screen and (min-width: 48rem) {
+  .card_button {
+    margin-bottom: 2.25rem;
+  }
+}
+
+.payment {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.payment_price {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+.payment_price .payment_price_dollar {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+.payment_price .payment_price_sub {
+  vertical-align: super;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -45,7 +45,6 @@
 
   @media screen and (min-width: rem($tablet_screen)) {
     display: flex;
-    // justify-content: space-between;
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -91,7 +90,7 @@
   padding: rem(8) rem(8) rem(8) 0;
   width: 100%;
   background-color: inherit;
-  border: 1px solid transparent;
+  border: rem(1) solid transparent;
   border-bottom-color: $color_white;
   color: $color_white;
   transition: border-bottom-color 0.2s ease-in-out;
@@ -115,7 +114,7 @@
   &:focus {
     color: $accent_color;
     background-color: $color_white;
-    border: rem(1) solid $accent_color;
+    box-shadow: 0 0 rem(1) rem(1) $accent_color;
   }
 
   @media screen and (min-width: rem($tablet_screen)) {
@@ -143,6 +142,7 @@
     max-width: rem(224);
     grid-row-start: 2;
     grid-column-start: 2;
+    align-self: center;
   }
   @media screen and (min-width: rem($desktop_screen)) {
     max-width: none;
