@@ -236,11 +236,11 @@
       <!-- section contact us -->
       <section class="contact_us invers_text">
         <div class="container make_grid">
-          <h4 class="contact_us_subtitle text_16 title_line invers">
+          <h4 class="contact_us_subtitle text_16 title_line invers_text">
             Contact us
           </h4>
           <div>
-            <h3 class="contact_us_title text_24 desktop">
+            <h3 class="contact_us_title text_24 desktop invers_text">
               Leave your details and we will contact you to discuss your
               questions
             </h3>
@@ -393,8 +393,8 @@
       <!-- section reviews -->
       <section class="portfolio">
         <div class="container">
-          <h4 class="text_16 title_line">Portfolio</h4>
-          <h2 class="text_32">Our latest completed projects</h2>
+          <h4 class="portfolio_subtitle text_16 title_line invers_text">Portfolio</h4>
+          <h2 class="portfolio_title text_32 invers_text">Our latest completed projects</h2>
           <h2>SLIDER</h2>
         </div>
       </section>
@@ -402,7 +402,7 @@
       <!-- section reviews -->
       <section class="reviews">
         <div class="container">
-          <h4 class="text_16 title_line">Reviews</h4>
+          <h4 class="reviews_subtitle text_16 title_line">Reviews</h4>
           <img src="./images/quotes.svg" alt="quotes" />
           <p class="description">
             Thanks for your work! I've got my order right on time, and the
@@ -424,54 +424,44 @@
 
       <!-- section answers -->
       <section class="answers">
-        <div class="container">
-          <h4 class="text_16 title_line">FAQ</h4>
-          <h2 class="text_32">Answers to frequently asked questions</h2>
-
-          <ul class="about_work_list">
+        <div class="container make_grid">
+          <div>
+            <h4 class="answers_subtitle text_16 title_line">FAQ</h4>
+            <h2 class="answers_title text_32">Answers to frequently asked questions</h2>
+          </div>
+          <ul class="answers_list">
             <li class="item">
-              <button class="accordion">
-                <h3 class="section_subtitle">
+              <button class="button_accordion">
                   What information should be on a landing page?
-                </h3>
               </button>
-              <p class="description">
+              <p class="panel">
                 A winning Landing Page should have one clear message, one
                 proposition and one effective Call to Action
               </p>
             </li>
             <li class="item">
-              <button class="accordion">
-                <h3 class="section_subtitle">
+              <button class="button_accordion">
                   What qualities make an appealing Landing Page?
-                </h3>
               </button>
-              <p class="description">
+              <p class="panel">
                 A winning Landing Page should have one clear message, one
                 proposition and one effective Call to Action
               </p>
             </li>
             <li class="item">
-              <button class="accordion">
-                <h3 class="section_subtitle">
+              <button class="button_accordion">
                   Is a landing page the same as a website?
-                </h3>
               </button>
-              <p class="description">
+              <p class="panel">
                 A winning Landing Page should have one clear message, one
                 proposition and one effective Call to Action
               </p>
             </li>
             <li class="item">
-              <button class="accordion">
-                <h3 class="section_subtitle">
-                  Why a subscription plan is more effective than single order?
-                </h3>
-              </button>
-              <p class="description">
+              <button class="button_accordion">Why a subscription plan is more effective than single order?</button>
+              <p class="panel">
                 A winning Landing Page should have one clear message, one
-                proposition and one effective Call to Action
-              </p>
+                proposition and one effective Call to Action</p>
             </li>
           </ul>
         </div>
@@ -532,5 +522,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/accordion.js"></script>
   </body>
 </html>

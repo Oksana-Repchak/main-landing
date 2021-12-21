@@ -1,0 +1,22 @@
+.portfolio {
+  background-color: $color_black;
+
+  .container {
+    .title_line::after {
+      background-color: $color_white;
+    }
+  }
+}
+
+.portfolio_subtitle {
+  margin-bottom: rem(16);
+  @media screen and (min-width: rem($desktop_screen)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.portfolio_title {
+  @media screen and (max-width: rem($tablet_screen - 2)) {
+    margin-bottom: rem(32);
+  }
+}

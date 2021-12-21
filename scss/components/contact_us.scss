@@ -1,4 +1,6 @@
 .contact_us {
+  background-color: $color_black;
+
   .container {
     @media screen and (min-width: rem($tablet_screen)) {
       grid-template-columns: 1fr 2fr;
@@ -23,10 +25,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-}
-
-.contact_us {
-  background-color: $color_black;
 }
 
 .contact_us_subtitle {

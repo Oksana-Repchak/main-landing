@@ -1,0 +1,102 @@
+.answers {
+  .make_grid {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: rem(32);
+    }
+  }
+}
+
+.answers_subtitle {
+  margin-bottom: rem(16);
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.answers_title {
+  @media screen and (max-width: rem($tablet_screen - 2)) {
+    margin-bottom: rem(32);
+  }
+}
+
+.answers_list {
+  max-width: rem(320);
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    max-width: rem(464);
+  }
+
+  @media screen and (min-width: rem($desktop_screen)) {
+    max-width: rem(816);
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// _________________accordion_______________________
+
+.button_accordion {
+  border: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $color_black;
+
+  padding: rem(24) 0 0 0;
+  background-color: inherit;
+  text-align: left;
+  color: $color_title;
+  font-family: Arial;
+  font-size: rem(20);
+  line-height: rem(28);
+  cursor: pointer;
+
+  transition: all 250ms $timing_function;
+  @media screen and (min-width: rem($desktop_screen)) {
+    font-size: rem(24);
+    line-height: rem(32);
+    padding: rem(32) 0 0 0;
+  }
+}
+
+.active-accordion,
+.button_accordion :focus {
+  border: 0;
+}
+
+.button_accordion:after {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+  padding: rem(8);
+  background-image: url("./../images/up_arrow.svg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.active-accordion:after {
+  content: "";
+  width: rem(24);
+  height: rem(24);
+
+  padding: rem(8);
+  background-image: url("./../images/down_arrow.svg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.panel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 0;
+  min-width: 445px;
+  overflow: hidden;
+  transition: max-height $timing_function;
+}
