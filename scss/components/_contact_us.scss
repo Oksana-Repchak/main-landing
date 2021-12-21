@@ -85,7 +85,7 @@
 
 .form_input {
   display: block;
-  padding: rem(8) rem(8) rem(8) 0;
+  padding: 0 0 rem(8) 0;
   width: 100%;
   background-color: inherit;
   border: rem(1) solid transparent;
@@ -124,31 +124,133 @@
   }
 
   @media screen and (min-width: rem($desktop_screen)) {
-    margin-right: 0;
-    grid-row-start: 1;
-    grid-column-start: 3;
-    align-self: center;
-    justify-self: end;
+    &.contact_us {
+      margin-right: 0;
+      grid-row-start: 1;
+      grid-column-start: 3;
+      align-self: center;
+      justify-self: end;
+    }
   }
 }
 
 .form_consent {
-  max-width: rem(304);
   color: #c4c4c4;
+  @media screen and (max-width: rem($tablet_screen)) {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media screen and (min-width: rem($tablet_screen)) {
-    max-width: rem(224);
     grid-row-start: 2;
     grid-column-start: 2;
     align-self: center;
   }
   @media screen and (min-width: rem($desktop_screen)) {
-    max-width: none;
-    grid-row-start: 2;
-    grid-column-start: 1;
+    &.contact_us {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      align-self: start;
+    }
   }
 
   .accent {
     color: $accent_color;
+  }
+}
+
+// _____________contact_us leave a comment__________________
+.form_leave_comment {
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 0fr;
+  }
+  @media screen and (min-width: rem($desktop_screen)) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.leave_comment {
+  .container {
+    @media screen and (min-width: rem($tablet_screen)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: rem(32);
+    }
+
+    @media screen and (min-width: rem($desktop_screen)) {
+      column-gap: rem(216);
+    }
+  }
+}
+
+.contact_us_description {
+  margin-bottom: rem(32);
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 28px;
+  color: #c4c4c4;
+
+  @media screen and (min-width: rem($tablet_screen)) {
+    margin-bottom: 0;
+  }
+}
+
+.list_leave_comment {
+  margin-bottom: rem(24);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.label_wrapper {
+  @media screen and (min-width: rem($tablet_screen)) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(24);
+  }
+}
+
+.form_label {
+  &.leave_comment {
+    @media screen and (max-width: rem($tablet_screen - 2)) {
+      display: block;
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.margin_bot_16 {
+  margin-bottom: rem(16);
+}
+
+.form_input {
+  &.padding_0 {
+    padding: 0;
+  }
+
+  &.input_name {
+    @media screen and (min-width: rem($tablet_screen)) {
+      min-width: rem(190);
+    }
+    @media screen and (min-width: rem($desktop_screen)) {
+      min-width: rem(252);
+    }
+  }
+  &.input_email {
+    @media screen and (min-width: rem($tablet_screen)) {
+      min-width: rem(250);
+    }
+    @media screen and (min-width: rem($desktop_screen)) {
+      min-width: rem(286);
+    }
+  }
+}
+
+.form_consent {
+  &.leave_comment {
+    @media screen and (min-width: rem($desktop_screen)) {
+      max-width: rem(340);
+    }
   }
 }

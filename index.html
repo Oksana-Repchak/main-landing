@@ -271,8 +271,8 @@
                   />
                 </label>
               </div>
-              <button class="form_button text_18">Book call</button>
-              <p class="form_consent text_12">
+              <button class="form_button contact_us text_18">Book call</button>
+              <p class="form_consent contact_us text_12">
                 By clicking on the button, you agree to the
                 <span class="accent">processing of personal data</span>
               </p>
@@ -468,21 +468,24 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <h4 class="text_16 title_line">Contact us</h4>
-        <h3 class="text_24 desktop">Let's get started</h3>
-        <p class="description">
-          We would like to talk to you about how we can help. Please leave your
-          details here and one of our team will contact you as soon as possible.
-        </p>
+    <section class="contact_us invers_text leave_comment">
+      <div class="container make_grid">
+        <div>
+          <h4 class="contact_us_subtitle text_16 title_line invers_text margin_bot_16">Contact us</h4>
+          <h3 class="contact_us_title text_24 desktop invers_text margin_bot_16">Let's get started</h3>
+          <p class="contact_us_description">
+            We would like to talk to you about how we can help. Please leave your
+            details here and one of our team will contact you as soon as possible.
+          </p>
+        </div>
 
-        <form>
-          <div class="list-input">
-            <label class="form-label" for="name">
-              <span class="text-label">Your name</span>
+        <form class="form_leave_comment">
+          <div class="list_leave_comment">
+            <div class="label_wrapper">
+              <label class="form_label leave_comment" for="name">
+              <span class="text_label">Your name</span>
               <input
-                class="form-input"
+                class="form_input input_name"
                 type="text"
                 name="name"
                 id="name"
@@ -491,10 +494,10 @@
               />
             </label>
 
-            <label class="form-label" for="email">
-              <span class="text-label">Your email</span>
+            <label class="form_label" for="email">
+              <span class="text_label">Your email</span>
               <input
-                class="form-input"
+                class="form_input input_email"
                 type="text"
                 name="email"
                 id="email"
@@ -502,11 +505,12 @@
                 autocomplete="off"
               />
             </label>
+          </div>
 
-            <label class="form-label" for="message">
-              <span class="text-label">Your comment</span>
+            <label class="form_label" for="message">
+              <span class="text_label">Your comment</span>
               <textarea
-                class="form-input"
+                class="form_input"
                 name="message"
                 id="message"
                 placeholder="Your comment"
@@ -514,14 +518,14 @@
               ></textarea>
             </label>
           </div>
-          <a class="text_18">Book call</a>
-          <p>
+          <button class="form_button text_18">Book call</button>
+          <p class="form_consent leave_comment text_12">
             By clicking on the button, you agree to the
-            <span>processing of personal data</span>
+            <span class="accent">processing of personal data</span>
           </p>
         </form>
       </div>
-    </footer>
+    </section>
     <script src="./js/accordion.js"></script>
   </body>
 </html>
