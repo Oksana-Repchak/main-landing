@@ -1,27 +1,14 @@
-%list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-%link-decoration {
-  display: inline-block;
-  margin-top: 0;
-  text-decoration: none;
-}
-
 %button {
+  cursor: pointer;
   margin: 0;
   border: none;
-  box-shadow: 0px 0px 0px 0px;
-  cursor: pointer;
+  color: $accent_color;
   border-radius: rem(8);
-  padding: rem(12) rem(36);
 
   text-align: center;
 
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
 }
 
 %absolute_number {
@@ -31,7 +18,7 @@
   font-family: Arial;
   font-style: normal;
   font-weight: 700;
-  color: $text_color_light;
+  color: $text_color_secondary;
   font-size: rem(116);
   line-height: rem(116);
 }

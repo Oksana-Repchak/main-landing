@@ -4,27 +4,43 @@
 
   .container {
     &.make_grid {
-      @media screen and (min-width: rem($tablet_screen)) {
+      @media screen and (min-width: rem($tablet)) {
         grid-template-columns: 1fr 2fr;
         column-gap: rem(32);
       }
     }
 
     .title_line::after {
-      background-color: $color_white;
+      background-color: $white;
     }
   }
 }
 
 .portfolio_subtitle {
+  display: flex;
+  align-items: center;
   margin-bottom: rem(16);
-  @media screen and (min-width: rem($desktop_screen)) {
+  @media screen and (min-width: rem($desktop)) {
     margin-bottom: rem(32);
   }
 }
 
 .portfolio_title {
-  @media screen and (max-width: rem($tablet_screen - 2)) {
+  @media screen and (max-width: rem($tablet - 2)) {
     margin-bottom: rem(32);
+  }
+}
+
+.carousel_subtitle {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    margin-right: 16px;
+    background-color: $white;
+    display: inline-block;
+    width: rem(48);
+    height: rem(1);
   }
 }

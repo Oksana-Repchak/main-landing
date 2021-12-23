@@ -1,6 +1,6 @@
 .about {
   .container {
-    @media screen and (min-width: rem($tablet_screen)) {
+    @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
       column-gap: rem(32);
     }
@@ -9,15 +9,17 @@
 
 .about_subtitle {
   margin-bottom: rem(16);
-  color: $color_black;
+  color: $black;
+  display: flex;
+  align-items: center;
 
-  @media screen and (max-width: rem($tablet_screen)) {
+  @media screen and (max-width: rem($tablet)) {
     margin-bottom: rem(32);
   }
 }
 
 .about_title {
-  @media screen and (max-width: rem($tablet_screen)) {
+  @media screen and (max-width: rem($tablet)) {
     margin-bottom: rem(32);
   }
 }
@@ -25,8 +27,8 @@
 .about_text {
   margin-bottom: rem(24);
   font-weight: 400;
-  color: $color_title;
-  @media screen and (max-width: rem($tablet_screen)) {
+  color: $title_color;
+  @media screen and (max-width: rem($tablet)) {
     margin-bottom: rem(40);
   }
 }

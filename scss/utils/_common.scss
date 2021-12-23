@@ -8,12 +8,12 @@ h1,
 h3,
 button {
   font-family: "Arial", sans-serif;
-  color: $color_title;
+  color: $title_color;
 }
 
 h2,
 h4 {
-  color: $color_black;
+  color: $black;
 }
 
 section {
@@ -22,17 +22,14 @@ section {
 
 .container {
   margin: 0 auto;
-  padding: 0 rem(16);
-  min-height: inherit;
+  padding: 0 rem(20);
 
-  width: rem($mobile_screen);
-
-  @media screen and (min-width: rem($tablet_screen)) {
-    width: rem($tablet_screen);
+  @media screen and (min-width: rem($tablet)) {
+    width: rem($tablet);
+    padding: 0 rem(28);
   }
-  @media screen and (min-width: rem($desktop_screen)) {
-    width: rem($desktop_screen);
-    padding: 0 rem(340);
+  @media screen and (min-width: rem($desktop)) {
+    width: rem($desktop);
   }
 }
 
@@ -45,11 +42,9 @@ section {
 }
 
 .title_line::after {
-  position: relative;
   content: "";
-  background-color: $color_black;
-  left: rem(16);
-  bottom: rem(6);
+  margin-left: 16px;
+  background-color: $black;
   display: inline-block;
   width: rem(48);
   height: rem(1);

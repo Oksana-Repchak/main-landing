@@ -1,6 +1,6 @@
 .ideas {
   .container {
-    @media screen and (min-width: rem($tablet_screen)) {
+    @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
       column-gap: 32px;
     }
@@ -8,7 +8,7 @@
 }
 
 .ideas_subtitle {
-  @media screen and (max-width: rem($tablet_screen)) {
+  @media screen and (max-width: rem($tablet)) {
     margin-bottom: rem(32);
   }
 }
@@ -22,11 +22,11 @@
   max-width: rem(272);
   margin-left: auto;
 
-  @media screen and (min-width: rem($tablet_screen)) {
+  @media screen and (min-width: rem($tablet)) {
     max-width: rem(376);
   }
 
-  @media screen and (min-width: rem($desktop_screen)) {
+  @media screen and (min-width: rem($desktop)) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -42,11 +42,11 @@
     &:not(:last-child) {
       margin-bottom: rem(64);
 
-      @media screen and (min-width: rem($tablet_screen)) {
+      @media screen and (min-width: rem($tablet)) {
         margin-bottom: rem(92);
       }
 
-      @media screen and (min-width: rem($desktop_screen)) {
+      @media screen and (min-width: rem($desktop)) {
         margin-bottom: 0;
       }
     }
@@ -57,12 +57,12 @@
     top: rem(-40);
     left: rem(-96);
 
-    @media screen and (min-width: rem($tablet_screen)) {
+    @media screen and (min-width: rem($tablet)) {
       top: rem(-40);
       left: rem(-96);
     }
 
-    @media screen and (min-width: rem($desktop_screen)) {
+    @media screen and (min-width: rem($desktop)) {
       top: rem(-44);
       left: rem(-88);
     }

@@ -1,36 +1,32 @@
-.heder {
+.header {
   padding-top: rem(16);
   padding-bottom: rem(16);
-  background-color: $color_black;
+  background-color: $black;
 
   .container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
 
-    @media screen and (min-width: rem($tablet_screen)) {
-      grid-template-columns: 2fr 1fr 1fr;
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 4fr auto;
       grid-column-gap: rem(48);
     }
     align-items: center;
-    justify-content: space-between;
   }
 
   .button_black {
     display: none;
 
-    @media screen and (min-width: rem($tablet_screen)) {
+    @media screen and (min-width: rem($tablet)) {
       display: block;
-      min-width: rem(190);
     }
   }
 }
 
-.heder_logo_img {
-  width: rem(142);
-  height: rem(40);
+.header_logo_img {
+  max-width: rem(142);
 
-  @media screen and (min-width: rem($desktop_screen)) {
-    width: rem(200);
-    height: rem(56);
+  @media screen and (min-width: rem($desktop)) {
+    max-width: rem(200);
   }
 }
 
@@ -38,6 +34,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  gap: rem(10);
 }
 
 .language_img {
@@ -46,7 +43,7 @@
 }
 
 .language_select {
-  color: $color_white;
+  color: $white;
   background-color: inherit;
   border: none;
 }
@@ -58,7 +55,7 @@
   outline: none;
   border: none;
   color: black;
-  background-color: $color_white;
+  background-color: $white;
   filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.09));
 }
 

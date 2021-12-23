@@ -12,11 +12,11 @@
     <title>Nord Softworks</title>
   </head>
   <body>
-    <!-- Website heder -->
-    <header class="heder">
+    <!-- Website header -->
+    <header class="header">
       <div class="container make_grid">
-        <a href="" class="heder_logo"
-          ><img src="./images/logo.png" class="heder_logo_img alt="logo" /></a
+        <a href="" class="header_logo"
+          ><img src="./images/logo.png" class="header_logo_img alt="logo" /></a
         >
 
         <div class="language_dropdown font_family">
@@ -80,7 +80,9 @@
       <!-- Website ideas -->
       <section class="ideas">
         <div class="container make_grid">
-          <h4 class="ideas_subtitle text_16 title_line">Ideas</h4>
+          <div class="wrapper_ideas">
+            <h4 class="ideas_subtitle text_16 title_line">Ideas</h4>
+          </div>
           <div>
             <h3 class="ideas_title text_24 desktop">Our Core Beliefs</h3>
             <ul class="ideas_list">
@@ -240,9 +242,11 @@
       <!-- section contact us -->
       <section class="contact_us invers_text">
         <div class="container make_grid">
-          <h4 class="contact_us_subtitle text_16 title_line invers_text">
+          <div class="wrapper_subtitle">
+            <h4 class="contact_us_subtitle text_16 title_line invers_text">
             Contact us
-          </h4>
+            </h4>
+          </div>
           <div>
             <h3 class="contact_us_title text_24 desktop invers_text">
               Leave your details and we will contact you to discuss your
@@ -390,8 +394,11 @@
           <div id="myCarousel" class="carousel">
 
             <div class="carousel__viewport">
-                <div class="carousel__slide">
-                <img data-lazy-src="./images/slide1.png" />
+              <div class="carousel__slide">
+                <a href="https://github.com/nordsoftworks/main-landing">
+                  <img data-lazy-src="./images/slide1.png" />
+                  <h4 class="carousel_subtitle text_16 invers_text">Cosine</h4>
+                </a>
               </div>
               <div class="carousel__slide">
                 <img data-lazy-src="./images/slide2.png" />
