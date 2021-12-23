@@ -2,6 +2,8 @@
   background-color: $black;
 
   .container {
+    display: grid;
+    gap: rem(32);
     @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
       column-gap: rem(32);
@@ -13,11 +15,20 @@
   }
 }
 
+.wrapper_form {
+  display: grid;
+  gap: rem(32);
+}
+
 .contact_us_form {
-  @media screen and (min-width: rem($tablet)) and (max-width: rem($desktop)) {
+  display: grid;
+  gap: 32px;
+
+  @media screen and (min-width: rem($tablet)) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0fr 0fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: rem(24);
+    row-gap: rem(32);
   }
 
   @media screen and (min-width: rem($desktop)) {
@@ -27,11 +38,6 @@
   }
 }
 
-.wrapper_subtitle {
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-bottom: rem(32);
-  }
-}
 .contact_us_subtitle {
   display: flex;
   align-items: center;
@@ -39,52 +45,31 @@
 
 .contact_us_title {
   font-weight: 400;
-  margin-bottom: rem(32);
 }
 
 .list_input {
-  margin-bottom: rem(32);
+  display: grid;
+  gap: rem(24);
 
   @media screen and (min-width: rem($tablet)) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(44);
+  }
 
   .form_label {
-    display: block;
-
-    &:first-child {
-      margin-bottom: rem(24);
-    }
-
-    @media screen and (min-width: rem($tablet)) {
-      &:first-child {
-        margin-bottom: 0;
-        margin-right: rem(24);
-      }
-      &:last-child {
-        min-width: rem(240);
-      }
-    }
-
-    @media screen and (min-width: rem($desktop)) {
-      margin-right: rem(40);
-
-      &:first-child {
-        min-width: rem(240);
-        margin-right: rem(40);
-      }
-      &:last-child {
-        min-width: rem(272);
-      }
-    }
+    display: grid;
+    gap: 16px;
   }
 }
 
 .text_label {
   display: inline-block;
-  margin-bottom: rem(16);
 }
 
 .form_input {
@@ -108,9 +93,11 @@
 .form_button {
   @extend %button;
   width: 100%;
-  margin-bottom: rem(24);
   color: $white;
   background-color: $accent_color;
+  padding: rem(12) rem(56);
+  justify-self: start;
+  align-self: end;
 
   &:hover,
   &:focus {
@@ -120,7 +107,6 @@
   }
 
   @media screen and (min-width: rem($tablet)) {
-    margin-bottom: 0;
     max-width: rem(200);
 
     grid-row-start: 2;
@@ -129,11 +115,8 @@
 
   @media screen and (min-width: rem($desktop)) {
     &.contact_us {
-      margin-right: 0;
       grid-row-start: 1;
       grid-column-start: 3;
-      align-self: center;
-      justify-self: end;
     }
   }
 }
