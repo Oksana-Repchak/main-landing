@@ -20,13 +20,13 @@
 }
 
 .sub_plans_list {
-  max-width: rem(264);
+  max-width: rem(272);
   margin-left: auto;
   margin-bottom: rem(64);
   text-align: left;
 
   @media screen and (min-width: rem($tablet_screen)) {
-    max-width: rem(400);
+    max-width: rem(408);
     margin-top: rem(16);
   }
 
@@ -55,16 +55,17 @@
 
 .plans_number {
   @extend %absolute_number;
-  bottom: rem(56);
-  right: rem(190);
+  top: -28px;
+  left: -56px;
 
   @media screen and (min-width: rem($tablet_screen)) {
-    left: rem(-56);
-    bottom: rem(16);
+    top: -28px;
+    left: -56px;
   }
 
   @media screen and (min-width: rem($desktop_screen)) {
-    top: rem(-32);
+    top: -28px;
+    left: -56px;
   }
 }
 

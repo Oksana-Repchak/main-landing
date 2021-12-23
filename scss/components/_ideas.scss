@@ -18,7 +18,7 @@
 }
 
 .ideas_list {
-  max-width: rem(264);
+  max-width: rem(272);
   margin-left: auto;
 
   @media screen and (min-width: rem($tablet_screen)) {
@@ -31,6 +31,7 @@
     grid-template-rows: 1fr 1fr;
     column-gap: rem(128);
     row-gap: rem(80);
+    padding-left: rem(80);
     max-width: none;
   }
 
@@ -52,17 +53,17 @@
 
   .ideas_number {
     @extend %absolute_number;
-    bottom: rem(20);
-    right: rem(190);
+    top: rem(-40);
+    left: rem(-96);
 
     @media screen and (min-width: rem($tablet_screen)) {
-      right: rem(340);
-      bottom: rem(-24);
+      top: rem(-40);
+      left: rem(-96);
     }
 
     @media screen and (min-width: rem($desktop_screen)) {
-      right: rem(240);
-      bottom: rem(20);
+      top: rem(-44);
+      left: rem(-88);
     }
   }
 }

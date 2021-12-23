@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Nord Softworks</title>
   </head>
@@ -90,7 +94,7 @@
                 increase call-to-action (CTA) engagement
               </li>
               <li class="ideas_item">
-                <span class="ideas_number6">03</span>Produce high quality
+                <span class="ideas_number">03</span>Produce high quality
                 adaptable and responsive landing pages that adjust seamlessly to
                 various user devices
               </li>
@@ -293,28 +297,13 @@
           </h2></div>
         <ul class="sub_plans_list">
           <li class="plans_item">
-            <span class="plans_number">01</span>Nord Softworks’ team of
-            professionals have been in this line of work for more than 5 years
-            developing many a landing page wordpress as well as
-            personal/business websites.
-          </li>
+            <span class="plans_number">01</span>Nord Softworks’ team of professionals have been in this line of work for more than 5 years developing many a landing page wordpress as well as personal/business websites. </li>
           <li class="plans_item">
-            <span class="plans_number">02</span>The entire system is secured
-            from end to end with high-end backup/security networks ensuring
-            that no errors or hackers gain access to any of clientele
-            information
-          </li>
+            <span class="plans_number">02</span>The entire system is secured from end to end with high-end backup/security networks ensuring that no errors or hackers gain access to any of clientele information</li>
           <li class="plans_item">
-            <span class="plans_number">03</span>Customer Data Protection: By
-            means of contemporary security systems & firewalls, all clientele
-            information is protected and secured.
-          </li>
+            <span class="plans_number">03</span>Customer Data Protection: By means of contemporary security systems & firewalls, all clientele information is protected and secured.</li>
           <li class="plans_item">
-            <span class="plans_number">04</span>100% Customer Satisfaction
-            Guaranteed: we always go up, above and beyond to ensure that
-            clients have their requirements met; even if that means
-            entertaining last minute ideas or opinions
-          </li>
+            <span class="plans_number">04</span>100% Customer Satisfaction Guaranteed: we always go up, above and beyond to ensure that clients have their requirements met; even if that means entertaining last minute ideas or opinions </li>
         </ul></div>
 
           <ul class="plans_cards">
@@ -392,10 +381,35 @@
 
       <!-- section reviews -->
       <section class="portfolio">
-        <div class="container">
-          <h4 class="portfolio_subtitle text_16 title_line invers_text">Portfolio</h4>
-          <h2 class="portfolio_title text_32 invers_text">Our latest completed projects</h2>
-          <h2>SLIDER</h2>
+        <div class="container make_grid">
+          <div>
+            <h4 class="portfolio_subtitle text_16 title_line invers_text">Portfolio</h4>
+            <h2 class="portfolio_title text_32 invers_text">Our latest completed projects</h2>
+          </div>
+
+          <div id="myCarousel" class="carousel">
+
+            <div class="carousel__viewport">
+                <div class="carousel__slide">
+                <img data-lazy-src="./images/slide1.png" />
+              </div>
+              <div class="carousel__slide">
+                <img data-lazy-src="./images/slide2.png" />
+              </div>
+              <div class="carousel__slide">
+                <img data-lazy-src="./images/slide3.png" />
+              </div>
+              <div class="carousel__slide">
+                <img data-lazy-src="./images/slide4.png" />
+              </div>
+          </div>
+          <div class="text-right text-xl p-4">
+            <span class="carousel_index">1</span>&nbsp;|&nbsp;<span
+              class="carousel_count"
+              >1</span>
+          </div>
+          </div>
+          
         </div>
       </section>
 
@@ -525,6 +539,8 @@
           </p>
         </form>
       </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="./js/carousel.js"></script>
     <script src="./js/accordion.js"></script>
   </body>
 </html>

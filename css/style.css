@@ -458,17 +458,20 @@ section {
 .hero_title {
   margin-bottom: 3rem;
   color: #ffffff;
+  margin-right: auto;
 }
 
 .hero_list {
   position: relative;
   z-index: 11;
   margin-bottom: 3rem;
+  margin-right: auto;
   color: #ffffff;
   list-style: url("./../images/list_elipse.svg");
 }
 .hero_list .item {
   padding-left: 1rem;
+  max-width: 18.75rem;
 }
 .hero_list .item:not(:last-child) {
   margin-bottom: 2rem;
@@ -584,7 +587,7 @@ section {
 }
 
 .ideas_list {
-  max-width: 16.5rem;
+  max-width: 17rem;
   margin-left: auto;
 }
 @media screen and (min-width: 48rem) {
@@ -599,6 +602,7 @@ section {
     grid-template-rows: 1fr 1fr;
     column-gap: 8rem;
     row-gap: 5rem;
+    padding-left: 5rem;
     max-width: none;
   }
 }
@@ -619,19 +623,19 @@ section {
   }
 }
 .ideas_list .ideas_number {
-  bottom: 1.25rem;
-  right: 11.875rem;
+  top: -2.5rem;
+  left: -6rem;
 }
 @media screen and (min-width: 48rem) {
   .ideas_list .ideas_number {
-    right: 21.25rem;
-    bottom: -1.5rem;
+    top: -2.5rem;
+    left: -6rem;
   }
 }
 @media screen and (min-width: 120rem) {
   .ideas_list .ideas_number {
-    right: 15rem;
-    bottom: 1.25rem;
+    top: -2.75rem;
+    left: -5.5rem;
   }
 }
 
@@ -1004,14 +1008,14 @@ section {
 }
 
 .sub_plans_list {
-  max-width: 16.5rem;
+  max-width: 17rem;
   margin-left: auto;
   margin-bottom: 4rem;
   text-align: left;
 }
 @media screen and (min-width: 48rem) {
   .sub_plans_list {
-    max-width: 25rem;
+    max-width: 25.5rem;
     margin-top: 1rem;
   }
 }
@@ -1040,18 +1044,19 @@ section {
 }
 
 .plans_number {
-  bottom: 3.5rem;
-  right: 11.875rem;
+  top: -28px;
+  left: -56px;
 }
 @media screen and (min-width: 48rem) {
   .plans_number {
-    left: -3.5rem;
-    bottom: 1rem;
+    top: -28px;
+    left: -56px;
   }
 }
 @media screen and (min-width: 120rem) {
   .plans_number {
-    top: -2rem;
+    top: -28px;
+    left: -56px;
   }
 }
 
@@ -1195,7 +1200,13 @@ section {
 }
 
 .portfolio {
-  background-color: #111111;
+  background-color: burlywood;
+}
+@media screen and (min-width: 48rem) {
+  .portfolio .container.make_grid {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
 }
 .portfolio .container .title_line::after {
   background-color: #ffffff;

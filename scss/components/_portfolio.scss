@@ -1,7 +1,15 @@
 .portfolio {
-  background-color: $color_black;
+  // background-color: $color_black;
+  background-color: burlywood;
 
   .container {
+    &.make_grid {
+      @media screen and (min-width: rem($tablet_screen)) {
+        grid-template-columns: 1fr 2fr;
+        column-gap: rem(32);
+      }
+    }
+
     .title_line::after {
       background-color: $color_white;
     }
