@@ -646,35 +646,38 @@ section {
   }
 }
 
+.about_work_list {
+  display: grid;
+  gap: 3rem;
+}
+@media screen and (min-width: 80rem) {
+  .about_work_list {
+    gap: 4.5rem;
+  }
+}
+
+.work_list_item {
+  display: grid;
+  gap: 1.5rem;
+}
 @media screen and (min-width: 48rem) {
-  .work_list_item.make_grid {
+  .work_list_item {
     grid-template-columns: 1fr 2fr;
     column-gap: 32px;
   }
 }
-.work_list_item:not(:last-child) {
-  margin-bottom: 3rem;
-}
-
-@media screen and (max-width: 47.875rem) {
-  .about_work_title {
-    margin-bottom: 1.5rem;
-  }
-}
 
 .description_list {
-  margin-bottom: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  padding-left: 1rem;
   list-style: url("./../images/list_elipse.svg");
 }
 .description_list .item {
   padding-left: 1rem;
 }
-.description_list .item:not(:last-child) {
-  margin-bottom: 1rem;
-}
 
 .about_work_img {
-  margin: 0 -16px;
   width: 100vw;
 }
 @media screen and (min-width: 48rem) {

@@ -1,37 +1,39 @@
-.work_list_item {
-  &.make_grid {
-    @media screen and (min-width: rem($tablet)) {
-      grid-template-columns: 1fr 2fr;
-      column-gap: 32px;
-    }
+.about_work_list {
+  display: grid;
+  gap: rem(48);
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(72);
   }
+}
+.work_list_item {
+  display: grid;
+  gap: rem(24);
 
-  &:not(:last-child) {
-    margin-bottom: rem(48);
+  @media screen and (min-width: rem($tablet)) {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 32px;
   }
 }
 
 .about_work_title {
   @media screen and (max-width: rem(766)) {
-    margin-bottom: rem(24);
   }
 }
 
 .description_list {
-  margin-bottom: rem(24);
+  display: grid;
+  gap: rem(16);
+  padding-left: rem(16);
+
   list-style: url("./../images/list_elipse.svg");
 
   .item {
     padding-left: rem(16);
-
-    &:not(:last-child) {
-      margin-bottom: rem(16);
-    }
   }
 }
 
 .about_work_img {
-  margin: 0 -16px;
+  // margin: 0 rem(-20);
   width: 100vw;
 
   @media screen and (min-width: rem($tablet)) {
