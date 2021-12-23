@@ -32,7 +32,7 @@
     max-width: rem(816);
   }
 
-  .item {
+  .accordion_item {
     display: flex;
     flex-direction: column;
   }
@@ -64,7 +64,7 @@
   }
 }
 
-.active-accordion,
+.active_accordion,
 .button_accordion :focus {
   border: 0;
 }
@@ -80,7 +80,7 @@
   background-repeat: no-repeat;
 }
 
-.active-accordion:after {
+.active_accordion:after {
   content: "";
   width: rem(24);
   height: rem(24);

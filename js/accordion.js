@@ -1,8 +1,9 @@
-let acc = document.getElementsByClassName("button_accordion");
+const acc = document.getElementsByClassName("button_accordion");
 
 for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
-    this.classList.toggle("active-accordion");
+    this.classList.toggle("active_accordion");
+
     const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
