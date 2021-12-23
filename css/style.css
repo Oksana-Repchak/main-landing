@@ -201,12 +201,15 @@ body {
 }
 
 h1,
-h2,
 h3,
-h4,
 button {
   font-family: "Arial", sans-serif;
   color: #333333;
+}
+
+h2,
+h4 {
+  color: #111111;
 }
 
 section {
@@ -547,6 +550,7 @@ section {
 
 .about_subtitle {
   margin-bottom: 1rem;
+  color: #111111;
 }
 @media screen and (max-width: 48rem) {
   .about_subtitle {
@@ -562,6 +566,8 @@ section {
 
 .about_text {
   margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: #333333;
 }
 @media screen and (max-width: 48rem) {
   .about_text {
@@ -584,6 +590,7 @@ section {
 
 .ideas_title {
   margin-bottom: 4.5rem;
+  font-weight: 400;
 }
 
 .ideas_list {

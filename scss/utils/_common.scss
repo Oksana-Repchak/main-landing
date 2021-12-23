@@ -5,12 +5,15 @@ body {
 }
 
 h1,
-h2,
 h3,
-h4,
 button {
   font-family: "Arial", sans-serif;
   color: $color_title;
+}
+
+h2,
+h4 {
+  color: $color_black;
 }
 
 section {
@@ -36,10 +39,6 @@ section {
 .make_grid {
   display: grid;
 }
-
-// .make_flex {
-//   display: flex;
-// }
 
 .make_center {
   justify-content: center;

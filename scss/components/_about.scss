@@ -9,6 +9,7 @@
 
 .about_subtitle {
   margin-bottom: rem(16);
+  color: $color_black;
 
   @media screen and (max-width: rem($tablet_screen)) {
     margin-bottom: rem(32);
@@ -23,7 +24,8 @@
 
 .about_text {
   margin-bottom: rem(24);
-
+  font-weight: 400;
+  color: $color_title;
   @media screen and (max-width: rem($tablet_screen)) {
     margin-bottom: rem(40);
   }
