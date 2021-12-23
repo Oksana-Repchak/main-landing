@@ -44,7 +44,6 @@
     height: rem(588);
     @media screen and (min-width: rem($tablet)) {
       width: rem(1200);
-
       height: rem(570);
     }
     @media screen and (min-width: rem($desktop)) {
@@ -72,7 +71,6 @@
   }
 
   @media screen and (min-width: rem($tablet)) {
-    // grid-template-columns: 1fr 1fr 2fr;
     grid-auto-flow: column;
   }
   @media screen and (min-width: rem($desktop)) {

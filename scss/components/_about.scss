@@ -1,34 +1,48 @@
 .about {
   .container {
+    align-items: start;
+    gap: rem(32);
+
     @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
-      column-gap: rem(32);
+      gap: rem(32);
     }
   }
 }
 
+.wrapper_about_title {
+  display: grid;
+  gap: rem(16);
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(32);
+  }
+}
+
+.wrapper_about_desc {
+  display: grid;
+  gap: rem(24);
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(40);
+  }
+}
+
 .about_subtitle {
-  margin-bottom: rem(16);
   color: $black;
   display: flex;
   align-items: center;
 
   @media screen and (max-width: rem($tablet)) {
-    margin-bottom: rem(32);
   }
 }
 
 .about_title {
   @media screen and (max-width: rem($tablet)) {
-    margin-bottom: rem(32);
   }
 }
 
 .about_text {
-  margin-bottom: rem(24);
   font-weight: 400;
   color: $title_color;
   @media screen and (max-width: rem($tablet)) {
-    margin-bottom: rem(40);
   }
 }

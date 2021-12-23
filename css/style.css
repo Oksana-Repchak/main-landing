@@ -235,6 +235,10 @@ section {
   justify-content: center;
 }
 
+.padding_bottom_0 {
+  padding-bottom: 0;
+}
+
 .title_line::after {
   content: "";
   margin-left: 16px;
@@ -535,67 +539,82 @@ section {
   }
 }
 
+.about .container {
+  align-items: start;
+  gap: 2rem;
+}
 @media screen and (min-width: 48rem) {
   .about .container {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+
+.wrapper_about_title {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 80rem) {
+  .wrapper_about_title {
+    gap: 2rem;
+  }
+}
+
+.wrapper_about_desc {
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 80rem) {
+  .wrapper_about_desc {
+    gap: 2.5rem;
+  }
+}
+
+.about_subtitle {
+  color: #111111;
+  display: flex;
+  align-items: center;
+}
+.about_text {
+  font-weight: 400;
+  color: #333333;
+}
+.ideas .container {
+  gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .ideas .container {
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
 }
 
-.about_subtitle {
-  margin-bottom: 1rem;
-  color: #111111;
+.ideas_subtitle {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 48rem) {
-  .about_subtitle {
-    margin-bottom: 2rem;
-  }
+.wrapper_ideas {
+  gap: 4.5rem;
 }
-
-@media screen and (max-width: 48rem) {
-  .about_title {
-    margin-bottom: 2rem;
-  }
-}
-
-.about_text {
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  color: #333333;
-}
-@media screen and (max-width: 48rem) {
-  .about_text {
-    margin-bottom: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .ideas .container {
-    grid-template-columns: 1fr 2fr;
-    column-gap: 32px;
-  }
-}
-
-@media screen and (max-width: 48rem) {
-  .ideas_subtitle {
-    margin-bottom: 2rem;
+@media screen and (min-width: 80rem) {
+  .wrapper_ideas {
+    gap: 5rem;
   }
 }
 
 .ideas_title {
-  margin-bottom: 4.5rem;
   font-weight: 400;
 }
 
 .ideas_list {
-  max-width: 17rem;
-  margin-left: auto;
+  display: grid;
+  gap: 4rem;
+  justify-self: end;
+  padding-left: 6rem;
 }
 @media screen and (min-width: 48rem) {
   .ideas_list {
-    max-width: 23.5rem;
+    padding-left: 5.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -605,25 +624,10 @@ section {
     grid-template-rows: 1fr 1fr;
     column-gap: 8rem;
     row-gap: 5rem;
-    padding-left: 5rem;
-    max-width: none;
   }
 }
 .ideas_list .ideas_item {
   position: relative;
-}
-.ideas_list .ideas_item:not(:last-child) {
-  margin-bottom: 4rem;
-}
-@media screen and (min-width: 48rem) {
-  .ideas_list .ideas_item:not(:last-child) {
-    margin-bottom: 5.75rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .ideas_list .ideas_item:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
 .ideas_list .ideas_number {
   top: -2.5rem;

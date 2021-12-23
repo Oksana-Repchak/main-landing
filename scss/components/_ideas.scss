@@ -1,29 +1,40 @@
 .ideas {
   .container {
+    gap: rem(32);
     @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
-      column-gap: 32px;
+      column-gap: rem(32);
     }
   }
 }
 
 .ideas_subtitle {
+  display: flex;
+  align-items: center;
+
   @media screen and (max-width: rem($tablet)) {
-    margin-bottom: rem(32);
+  }
+}
+
+.wrapper_ideas {
+  gap: rem(72);
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(80);
   }
 }
 
 .ideas_title {
-  margin-bottom: rem(72);
   font-weight: 400;
 }
 
 .ideas_list {
-  max-width: rem(272);
-  margin-left: auto;
+  display: grid;
+  gap: rem(64);
+  justify-self: end;
+  padding-left: rem(96);
 
   @media screen and (min-width: rem($tablet)) {
-    max-width: rem(376);
+    padding-left: rem(88);
   }
 
   @media screen and (min-width: rem($desktop)) {
@@ -32,24 +43,10 @@
     grid-template-rows: 1fr 1fr;
     column-gap: rem(128);
     row-gap: rem(80);
-    padding-left: rem(80);
-    max-width: none;
   }
 
   .ideas_item {
     position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: rem(64);
-
-      @media screen and (min-width: rem($tablet)) {
-        margin-bottom: rem(92);
-      }
-
-      @media screen and (min-width: rem($desktop)) {
-        margin-bottom: 0;
-      }
-    }
   }
 
   .ideas_number {
