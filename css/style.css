@@ -663,7 +663,7 @@ section {
 @media screen and (min-width: 48rem) {
   .work_list_item {
     grid-template-columns: 1fr 2fr;
-    column-gap: 32px;
+    column-gap: 2rem;
   }
 }
 
@@ -686,18 +686,42 @@ section {
   }
 }
 
+.benefits .make_grid {
+  align-items: start;
+  gap: 2rem;
+}
 @media screen and (min-width: 48rem) {
   .benefits .make_grid {
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
 }
+.benefits .wrapper_benefits_title {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 80rem) {
+  .benefits .wrapper_benefits_title {
+    gap: 2rem;
+  }
+}
+.benefits .wrapper_benefits_desc {
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 80rem) {
+  .benefits .wrapper_benefits_desc {
+    gap: 2.5rem;
+  }
+}
+.benefits .wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
 @media screen and (min-width: 48rem) {
   .benefits .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 1.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -710,38 +734,15 @@ section {
 .benefits_subtitle {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 47.875rem) {
-  .benefits_title {
-    margin-bottom: 2rem;
-  }
-}
-
-.benefits_explanation {
-  margin-bottom: 1.5rem;
-}
-
-.description {
-  margin-bottom: 1.5rem;
 }
 
 .number_wrapper {
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 47.875rem) {
-  .number_wrapper {
-    margin-bottom: 1.5rem;
-  }
-}
-.number_wrapper.margin_0 {
-  margin-bottom: 0;
+  gap: 1.125rem;
 }
 
 .number_black {
-  margin-right: 1.125rem;
   font-family: Arial;
   font-weight: 700;
 }

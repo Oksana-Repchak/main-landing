@@ -1,17 +1,36 @@
 .benefits {
   .make_grid {
+    align-items: start;
+    gap: rem(32);
     @media screen and (min-width: rem($tablet)) {
       grid-template-columns: 1fr 2fr;
       column-gap: rem(32);
     }
   }
 
+  .wrapper_benefits_title {
+    display: grid;
+    gap: rem(16);
+    @media screen and (min-width: rem($desktop)) {
+      gap: rem(32);
+    }
+  }
+
+  .wrapper_benefits_desc {
+    display: grid;
+    gap: rem(24);
+    @media screen and (min-width: rem($desktop)) {
+      gap: rem(40);
+    }
+  }
+
   .wrapper {
+    display: grid;
+    gap: rem(24);
+
     @media screen and (min-width: rem($tablet)) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: rem(32);
-      row-gap: rem(24);
     }
 
     @media screen and (min-width: rem($desktop)) {
@@ -24,37 +43,15 @@
 .benefits_subtitle {
   display: flex;
   align-items: center;
-  margin-bottom: rem(16);
-}
-
-.benefits_title {
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-bottom: rem(32);
-  }
-}
-
-.benefits_explanation {
-  margin-bottom: rem(24);
-}
-
-.description {
-  margin-bottom: rem(24);
 }
 
 .number_wrapper {
   display: flex;
   align-items: center;
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-bottom: rem(24);
-  }
-
-  &.margin_0 {
-    margin-bottom: 0;
-  }
+  gap: rem(18);
 }
 
 .number_black {
-  margin-right: rem(18);
   font-family: Arial;
   font-weight: 700;
 }
