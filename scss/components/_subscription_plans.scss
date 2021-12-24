@@ -158,7 +158,7 @@
   list-style: url("./../images/list_elipse_outline_gr.svg");
 
   @media screen and (min-width: rem($tablet)) {
-    padding: 0 rem(16);
+    padding: 0 0 0 rem(16);
   }
 
   .item {

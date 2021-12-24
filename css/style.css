@@ -1146,7 +1146,7 @@ section {
 }
 @media screen and (min-width: 48rem) {
   .card_list {
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
   }
 }
 .card_list .item:first-child {
