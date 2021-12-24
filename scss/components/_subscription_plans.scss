@@ -1,35 +1,51 @@
+.subscription_plans {
+  .container {
+    display: grid;
+    gap: rem(64);
+    @media screen and (min-width: rem($desktop)) {
+      gap: rem(160);
+    }
+  }
+}
+
 .subscription_plans_wrapper {
+  display: grid;
+  gap: rem(64);
+
   @media screen and (min-width: rem($tablet)) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: rem(32);
   }
+}
+
+.wrapper_subscription_title {
+  display: grid;
+  gap: rem(16);
+  align-content: start;
+
   @media screen and (min-width: rem($desktop)) {
-    margin-bottom: rem(160);
+    gap: rem(40);
   }
 }
+
 .sub_plans_subtitle {
   display: flex;
   align-items: center;
-  margin-bottom: rem(16);
 }
 
 .sub_plans_title {
-  margin-bottom: rem(64);
   @media screen and (min-width: rem($tablet)) {
-    margin-bottom: 0;
   }
 }
 
 .sub_plans_list {
-  max-width: rem(272);
-  margin-left: auto;
-  margin-bottom: rem(64);
-  text-align: left;
+  display: grid;
+  gap: rem(56);
+  padding-left: rem(56);
 
   @media screen and (min-width: rem($tablet)) {
-    max-width: rem(408);
-    margin-top: rem(16);
+    padding-top: rem(16);
   }
 
   @media screen and (min-width: rem($desktop)) {
@@ -37,22 +53,11 @@
     grid-template-columns: 1fr 1fr;
     column-gap: rem(88);
     row-gap: rem(100);
-    margin-left: rem(56);
-    margin-bottom: 0;
-    max-width: none;
   }
 }
 
 .plans_item {
   position: relative;
-
-  &:not(:last-child) {
-    margin-bottom: rem(56);
-
-    @media screen and (min-width: rem($desktop)) {
-      margin-bottom: 0;
-    }
-  }
 }
 
 .plans_number {
@@ -75,43 +80,45 @@
 
 .plans_cards {
   text-align: center;
+  display: grid;
+  gap: rem(36);
+  justify-content: center;
 
   @media screen and (min-width: rem($tablet)) {
     display: flex;
+    gap: rem(24);
     flex-direction: column;
     align-items: center;
   }
 
   @media screen and (min-width: rem($desktop)) {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    gap: rem(32);
+    grid-auto-flow: column;
   }
 }
 
 .card {
-  max-width: rem(320);
+  display: grid;
+  gap: rem(24);
   padding: rem(24);
   border: rem(1) solid #c4c4c4;
   border-radius: rem(6);
 
   @media screen and (min-width: rem($tablet)) {
     padding: rem(48) rem(48);
-
-    max-width: rem(392);
+    gap: rem(40);
   }
 
-  &:not(:last-child) {
-    margin-bottom: rem(40);
-
-    @media screen and (min-width: rem($desktop)) {
-      margin-bottom: 0;
-      margin-right: rem(32);
-    }
+  @media screen and (min-width: rem($desktop)) {
   }
 }
 
+.wrapper_title_card {
+  display: grid;
+  gap: rem(16);
+}
 .card_title {
-  margin-bottom: rem(16);
   color: $title_color;
 }
 
@@ -140,24 +147,23 @@
 }
 
 .price_per {
-  margin-bottom: rem(32);
   font-size: rem(12);
   line-height: rem(20);
 
   @media screen and (min-width: rem($tablet)) {
-    margin-bottom: rem(40);
+    // margin-bottom: rem(40);
   }
 }
 
 .card_list {
+  display: grid;
+  gap: rem(16);
   text-align: left;
 
-  margin-bottom: rem(16);
   padding: 0 rem(32);
   list-style: url("./../images/list_elipse_outline_gr.svg");
 
   @media screen and (min-width: rem($tablet)) {
-    margin-bottom: rem(40);
     padding: 0 rem(16);
   }
 
@@ -172,22 +178,18 @@
     &.list_style_orange {
       list-style: url("./../images/list_elipse_outline.svg");
     }
-
-    &:not(:last-child) {
-      margin-bottom: rem(16);
-    }
   }
 }
 
 .card_button {
   @extend %button;
   min-width: rem(200);
-  margin-bottom: rem(24);
   color: $white;
   background-color: $accent_color;
+  padding: rem(12) rem(56);
+  justify-self: center;
 
   @media screen and (min-width: rem($tablet)) {
-    margin-bottom: rem(36);
   }
 
   &:hover,

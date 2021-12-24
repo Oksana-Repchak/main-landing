@@ -22,7 +22,7 @@
 
 .contact_us_form {
   display: grid;
-  gap: 32px;
+  gap: rem(32);
 
   @media screen and (min-width: rem($tablet)) {
     display: grid;
@@ -64,7 +64,7 @@
 
   .form_label {
     display: grid;
-    gap: 16px;
+    gap: rem(32);
   }
 }
 
@@ -103,7 +103,7 @@
   &:focus {
     color: $accent_color;
     background-color: $white;
-    box-shadow: 0 0 rem(1) rem(1) $accent_color;
+    box-shadow: 0 0 0 rem(1) $accent_color;
   }
 
   @media screen and (min-width: rem($tablet)) {
