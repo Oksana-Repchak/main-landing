@@ -1193,10 +1193,15 @@ section {
 }
 
 .portfolio {
-  background-color: burlywood;
+  background-color: #111111;
+}
+.portfolio .container {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
 }
 @media screen and (min-width: 48rem) {
-  .portfolio .container.make_grid {
+  .portfolio .container {
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
@@ -1205,21 +1210,19 @@ section {
   background-color: #ffffff;
 }
 
-.portfolio_subtitle {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+.wrapper_portfolio_title {
+  display: grid;
+  gap: 1rem;
 }
 @media screen and (min-width: 80rem) {
-  .portfolio_subtitle {
-    margin-bottom: 2rem;
+  .wrapper_portfolio_title {
+    gap: 2rem;
   }
 }
 
-@media screen and (max-width: 47.875rem) {
-  .portfolio_title {
-    margin-bottom: 2rem;
-  }
+.portfolio_subtitle {
+  display: flex;
+  align-items: center;
 }
 
 .carousel_subtitle {
@@ -1233,6 +1236,67 @@ section {
   display: inline-block;
   width: 3rem;
   height: 0.0625rem;
+}
+
+.carousel_link {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.carousel__slide {
+  width: auto;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+@media screen and (min-width: 80rem) {
+  .carousel__slide {
+    padding: 1rem;
+  }
+}
+
+.carousel_number {
+  text-align: end;
+  margin-right: 3rem;
+  color: #c4c4c4;
+}
+
+#myCarousel {
+  --carousel-button-width: rem(24);
+  --carousel-button-height: rem(24);
+  --carousel-button-svg-width: rem(24);
+  --carousel-button-svg-height: rem(24);
+  color: #c4c4c4;
+}
+
+@media screen and (min-width: 48rem) {
+  .carousel__button.is-prev {
+    left: 30.625rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .carousel__button.is-prev {
+    left: 43rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .carousel__button.is-next {
+    right: 0.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .carousel__button.is-next {
+    right: 1rem;
+  }
+}
+
+.carousel__button.is-prev,
+.carousel__button.is-next {
+  top: 97%;
+  transition: 0.2s ease-in-out;
+}
+.carousel__button.is-prev:hover,
+.carousel__button.is-next:hover {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 47.875rem) {

@@ -1,13 +1,14 @@
 .portfolio {
-  // background-color: $color_black;
-  background-color: burlywood;
+  background-color: $black;
 
   .container {
-    &.make_grid {
-      @media screen and (min-width: rem($tablet)) {
-        grid-template-columns: 1fr 2fr;
-        column-gap: rem(32);
-      }
+    display: grid;
+    gap: rem(32);
+    align-items: start;
+
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: rem(32);
     }
 
     .title_line::after {
@@ -16,19 +17,17 @@
   }
 }
 
-.portfolio_subtitle {
-  display: flex;
-  align-items: center;
-  margin-bottom: rem(16);
+.wrapper_portfolio_title {
+  display: grid;
+  gap: rem(16);
   @media screen and (min-width: rem($desktop)) {
-    margin-bottom: rem(32);
+    gap: rem(32);
   }
 }
 
-.portfolio_title {
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-bottom: rem(32);
-  }
+.portfolio_subtitle {
+  display: flex;
+  align-items: center;
 }
 
 .carousel_subtitle {
@@ -42,5 +41,63 @@
     display: inline-block;
     width: rem(48);
     height: rem(1);
+  }
+}
+
+.carousel_link {
+  display: grid;
+  row-gap: rem(24);
+}
+
+.carousel__slide {
+  width: auto;
+  padding: rem(16) rem(8) rem(16) rem(8);
+
+  @media screen and (min-width: rem($desktop)) {
+    padding: rem(16);
+  }
+}
+
+.carousel_number {
+  text-align: end;
+  margin-right: rem(48);
+  color: #c4c4c4;
+}
+
+#myCarousel {
+  --carousel-button-width: rem(24);
+  --carousel-button-height: rem(24);
+
+  --carousel-button-svg-width: rem(24);
+  --carousel-button-svg-height: rem(24);
+  color: #c4c4c4;
+}
+
+.carousel__button.is-prev {
+  @media screen and (min-width: rem($tablet)) {
+    left: rem(490);
+  }
+
+  @media screen and (min-width: rem($desktop)) {
+    left: rem(688);
+  }
+}
+
+.carousel__button.is-next {
+  @media screen and (min-width: rem($tablet)) {
+    right: rem(8);
+  }
+  @media screen and (min-width: rem($desktop)) {
+    right: rem(16);
+  }
+}
+
+.carousel__button.is-prev,
+.carousel__button.is-next {
+  top: 97%;
+  transition: $transition;
+
+  &:hover {
+    color: $white;
   }
 }
