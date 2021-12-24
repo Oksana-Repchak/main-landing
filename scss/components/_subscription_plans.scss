@@ -109,15 +109,13 @@
     padding: rem(48) rem(48);
     gap: rem(40);
   }
-
-  @media screen and (min-width: rem($desktop)) {
-  }
 }
 
 .wrapper_title_card {
   display: grid;
   gap: rem(16);
 }
+
 .card_title {
   color: $title_color;
 }
@@ -149,10 +147,6 @@
 .price_per {
   font-size: rem(12);
   line-height: rem(20);
-
-  @media screen and (min-width: rem($tablet)) {
-    // margin-bottom: rem(40);
-  }
 }
 
 .card_list {
@@ -188,9 +182,6 @@
   background-color: $accent_color;
   padding: rem(12) rem(56);
   justify-self: center;
-
-  @media screen and (min-width: rem($tablet)) {
-  }
 
   &:hover,
   &:focus {

@@ -1099,6 +1099,7 @@ section {
     gap: 2.5rem;
   }
 }
+
 .wrapper_title_card {
   display: grid;
   gap: 1rem;
@@ -1134,6 +1135,7 @@ section {
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
+
 .card_list {
   display: grid;
   gap: 1rem;
@@ -1238,46 +1240,41 @@ section {
   }
 }
 
+.answers .container {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
 @media screen and (min-width: 48rem) {
-  .answers .make_grid {
+  .answers .container {
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
 }
 
+.wrapper_answers_title {
+  display: grid;
+  gap: 1rem;
+}
+
 .answers_subtitle {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 80rem) {
-  .answers_subtitle {
-    margin-bottom: 2rem;
-  }
-}
-
-@media screen and (max-width: 47.875rem) {
-  .answers_title {
-    margin-bottom: 2rem;
-  }
 }
 
 .answers_list {
-  max-width: 20rem;
+  display: grid;
+  gap: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .answers_list {
-    max-width: 29rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .answers_list {
-    max-width: 51rem;
+    gap: 1.5rem;
   }
 }
 .answers_list .accordion_item {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .button_accordion {
@@ -1332,16 +1329,9 @@ section {
 }
 
 .panel {
-  margin: 0.75rem 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
-}
-@media screen and (min-width: 80rem) {
-  .panel {
-    margin: 1rem 0;
-    max-width: 36.875rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
