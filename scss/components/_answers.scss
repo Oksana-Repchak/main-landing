@@ -24,6 +24,7 @@
 .answers_list {
   display: grid;
   gap: rem(16);
+
   @media screen and (min-width: rem($tablet)) {
     gap: rem(24);
   }

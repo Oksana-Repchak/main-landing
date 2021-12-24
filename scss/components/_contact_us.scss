@@ -61,11 +61,6 @@
   @media screen and (min-width: rem($desktop)) {
     gap: rem(44);
   }
-
-  .form_label {
-    display: grid;
-    gap: rem(32);
-  }
 }
 
 .text_label {
@@ -74,7 +69,7 @@
 
 .form_input {
   display: block;
-  padding: 0 0 rem(8) 0;
+  padding: rem(16) 0 rem(8) 0;
   width: 100%;
   background-color: inherit;
   border: rem(1) solid transparent;
@@ -148,11 +143,19 @@
 }
 
 // _____________contact_us leave a comment__________________
+.wrapper_leave_comment {
+  display: grid;
+  gap: rem(16);
+}
+
 .form_leave_comment {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(32);
+
   @media screen and (min-width: rem($tablet)) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0fr 0fr;
+    row-gap: rem(24);
   }
   @media screen and (min-width: rem($desktop)) {
     grid-template-columns: 1fr 2fr;
@@ -173,71 +176,58 @@
 }
 
 .contact_us_description {
-  margin-bottom: rem(32);
   font-family: Arial;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: rem(20);
+  line-height: rem(28);
   color: #c4c4c4;
-
-  @media screen and (min-width: rem($tablet)) {
-    margin-bottom: 0;
-  }
 }
 
 .list_leave_comment {
-  margin-bottom: rem(24);
+  display: grid;
+  gap: rem(32);
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .label_wrapper {
+  display: grid;
+  gap: rem(24);
+
   @media screen and (min-width: rem($tablet)) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: rem(24);
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1.5fr;
   }
-}
 
-.form_label {
-  &.leave_comment {
-    @media screen and (max-width: rem($tablet - 2)) {
-      display: block;
-      margin-bottom: rem(24);
-    }
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(64);
   }
-}
-
-.margin_bot_16 {
-  margin-bottom: rem(16);
 }
 
 .form_input {
   &.padding_0 {
     padding: 0;
   }
+}
 
-  &.input_name {
-    @media screen and (min-width: rem($tablet)) {
-      min-width: rem(190);
-    }
-    @media screen and (min-width: rem($desktop)) {
-      min-width: rem(252);
-    }
+.wrapper_button {
+  display: grid;
+  row-gap: rem(24);
+  @media screen and (min-width: rem($tablet)) {
+    row-gap: 0;
+    column-gap: rem(24);
+    grid-template-columns: 1fr 1.1fr;
   }
-  &.input_email {
-    @media screen and (min-width: rem($tablet)) {
-      min-width: rem(250);
-    }
-    @media screen and (min-width: rem($desktop)) {
-      min-width: rem(286);
-    }
+  @media screen and (min-width: rem($desktop)) {
+    grid-column-start: span 2;
+    grid-template-columns: 1fr 2fr;
+    column-gap: rem(32);
   }
 }
 
 .form_consent {
   &.leave_comment {
     @media screen and (min-width: rem($desktop)) {
-      max-width: rem(340);
+      max-width: rem(382);
     }
   }
 }

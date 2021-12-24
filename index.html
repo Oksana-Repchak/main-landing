@@ -498,8 +498,8 @@
 
     <section class="contact_us invers_text leave_comment">
       <div class="container make_grid">
-        <div>
-          <h4 class="contact_us_subtitle text_16 title_line invers_text margin_bot_16">Contact us</h4>
+        <div class="wrapper_leave_comment">
+          <h4 class="contact_us_subtitle text_16 title_line invers_text">Contact us</h4>
           <h3 class="contact_us_title text_24 desktop invers_text margin_bot_16">Let's get started</h3>
           <p class="contact_us_description">
             We would like to talk to you about how we can help. Please leave your
@@ -511,29 +511,29 @@
           <div class="list_leave_comment">
             <div class="label_wrapper">
               <label class="form_label leave_comment" for="name">
-              <span class="text_label">Your name</span>
-              <input
-                class="form_input input_name"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Daniel Bale"
-                autocomplete="off"
-              />
-            </label>
+                <span class="text_label">Your name</span>
+                <input
+                  class="form_input input_name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Daniel Bale"
+                  autocomplete="off"
+                />
+              </label>
 
-            <label class="form_label" for="email">
-              <span class="text_label">Your email</span>
-              <input
-                class="form_input input_email"
-                type="text"
-                name="email"
-                id="email"
-                placeholder="nord_softworks@gmail.com"
-                autocomplete="off"
-              />
-            </label>
-          </div>
+              <label class="form_label" for="email">
+                <span class="text_label">Your email</span>
+                <input
+                  class="form_input input_email"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="nord_softworks@gmail.com"
+                  autocomplete="off"
+                />
+              </label>
+            </div>
 
             <label class="form_label" for="message">
               <span class="text_label">Your comment</span>
@@ -546,11 +546,14 @@
               ></textarea>
             </label>
           </div>
-          <button class="form_button text_18">Book call</button>
-          <p class="form_consent leave_comment text_12">
-            By clicking on the button, you agree to the
-            <span class="accent">processing of personal data</span>
-          </p>
+
+          <div class="wrapper_button">
+            <button class="form_button text_18">Book call</button>
+            <p class="form_consent leave_comment text_12">
+              By clicking on the button, you agree to the
+              <span class="accent">processing of personal data</span>
+            </p>  
+          </div>
         </form>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

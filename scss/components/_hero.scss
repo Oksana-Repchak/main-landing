@@ -85,8 +85,12 @@
 
   display: grid;
   grid-auto-flow: column;
-  gap: 16px;
+  gap: rem(12);
   justify-self: start;
+
+  @media screen and (min-width: rem($tablet)) {
+    gap: rem(32);
+  }
 }
 
 .button_orange {
