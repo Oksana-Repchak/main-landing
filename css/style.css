@@ -860,6 +860,7 @@ section {
 }
 @media screen and (min-width: 80rem) {
   .form_button.contact_us {
+    align-self: start;
     grid-row-start: 1;
     grid-column-start: 3;
   }
@@ -957,10 +958,6 @@ section {
   }
 }
 
-.form_input.padding_0 {
-  padding: 0;
-}
-
 .wrapper_button {
   display: grid;
   row-gap: 1.5rem;
@@ -984,6 +981,35 @@ section {
   .form_consent.leave_comment {
     max-width: 23.875rem;
   }
+}
+
+.form_error {
+  position: relative;
+  color: #ff0000;
+  text-align: left;
+  font-size: 0.625rem;
+  line-height: 1rem;
+  display: block;
+  margin-top: 2px;
+  display: none;
+}
+.form_error::after {
+  position: absolute;
+  content: "!";
+  color: #ff0000;
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  left: 98%;
+  bottom: 115%;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-bottom-color: #ff0000;
+}
+
+input:invalid:not(:placeholder-shown) + .form_error {
+  display: block;
 }
 
 .subscription_plans .container {
