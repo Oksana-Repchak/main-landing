@@ -536,68 +536,102 @@
           </ul>
         </div>
       </section>
-    </main>
 
-    <section class="contact_us invers_text leave_comment">
-      <div class="container make_grid">
-        <div class="wrapper_leave_comment">
-          <h4 class="contact_us_subtitle text_16 title_line invers_text">Contact us</h4>
-          <h3 class="contact_us_title text_24 desktop invers_text margin_bot_16">Let's get started</h3>
-          <p class="contact_us_description">
-            We would like to talk to you about how we can help. Please leave your
-            details here and one of our team will contact you as soon as possible.
-          </p>
-        </div>
+      <section class="contact_us invers_text leave_comment">
+        <div class="container make_grid">
+          <div class="wrapper_leave_comment">
+            <h4 class="contact_us_subtitle text_16 title_line invers_text">Contact us</h4>
+            <h3 class="contact_us_title text_24 desktop invers_text margin_bot_16">Let's get started</h3>
+            <p class="contact_us_description">
+              We would like to talk to you about how we can help. Please leave your
+              details here and one of our team will contact you as soon as possible.
+            </p>
+          </div>
 
-        <form class="form_leave_comment">
-          <div class="list_leave_comment">
-            <div class="label_wrapper">
-              <label class="form_label leave_comment" for="name">
-                <span class="text_label">Your name</span>
-                <input
-                  class="form_input input_name"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Daniel Bale"
+          <form class="form_leave_comment">
+            <div class="list_leave_comment">
+              <div class="label_wrapper">
+                <label class="form_label leave_comment" for="name">
+                  <span class="text_label">Your name</span>
+                  <input
+                    class="form_input input_name"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Daniel Bale"
+                    autocomplete="off"
+                  />
+                </label>
+
+                <label class="form_label" for="email">
+                  <span class="text_label">Your email</span>
+                  <input
+                    class="form_input input_email"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="nord_softworks@gmail.com"
+                    autocomplete="off"
+                  />
+                </label>
+              </div>
+
+              <label class="form_label" for="message">
+                <span class="text_label">Your comment</span>
+                <textarea
+                  class="form_input"
+                  name="message"
+                  id="message"
+                  placeholder="Your comment"
                   autocomplete="off"
-                />
-              </label>
-
-              <label class="form_label" for="email">
-                <span class="text_label">Your email</span>
-                <input
-                  class="form_input input_email"
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="nord_softworks@gmail.com"
-                  autocomplete="off"
-                />
+                ></textarea>
               </label>
             </div>
 
-            <label class="form_label" for="message">
-              <span class="text_label">Your comment</span>
-              <textarea
-                class="form_input"
-                name="message"
-                id="message"
-                placeholder="Your comment"
-                autocomplete="off"
-              ></textarea>
-            </label>
+            <div class="wrapper_button">
+              <button class="form_button text_18">Book call</button>
+              <p class="form_consent leave_comment text_12">
+                By clicking on the button, you agree to the
+                <span class="accent">processing of personal data</span>
+              </p>  
+            </div>
+          </form>
+        </div>
+      </section>
+  </main>
+
+  <footer class="footer invers_text">
+    <div class="container">
+        <div class="footer_wrapper">
+          <a href="" class="header_logo"
+          ><img src="./images/logo.png" class="header_logo_img alt="logo" /></a
+          >
+          <div class="title_footer_wrapper">
+            <h4 class="footer_title invers_text">Info</h4>
+            <ul class="info_list">
+              <li>Private policy</li>
+              <li>Terms and conditions</li>
+              <li>Payment</li>
+            </ul>
           </div>
 
-          <div class="wrapper_button">
-            <button class="form_button text_18">Book call</button>
-            <p class="form_consent leave_comment text_12">
-              By clicking on the button, you agree to the
-              <span class="accent">processing of personal data</span>
-            </p>  
+          <div class="title_footer_wrapper">
+            <h4 class="footer_title invers_text">Contacts</h4>
+            <div class="contacts_list">
+              <a href="mailto:nord_softworks@gmail.com" class="link">nord_softworks@gmail.com</a>
+             <div>
+                <a href="" class="link">Facebook</a>
+                <a href="" class="link">Twitter</a>
+             </div>
+            </div>
           </div>
-        </form>
-      </div>
+
+          <button class="button_black button_footer text_18">Book call</button>
+        </div>
+
+        <p class="footer_copyright">&reg; 2021 Copyright. All rights reserved</p>
+    </div>
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/accordion.js"></script>

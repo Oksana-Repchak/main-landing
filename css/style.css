@@ -1479,6 +1479,54 @@ section {
   transition: max-height 0.2s ease-in-out;
 }
 
+.footer {
+  padding: 2.5rem 0 2.5rem 0;
+  background-color: #111111;
+}
+.footer .container {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.footer_wrapper {
+  display: grid;
+}
+@media screen and (min-width: 48rem) {
+  .footer_wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8.5rem;
+  }
+}
+.footer_wrapper .footer_title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.title_footer_wrapper {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.info_list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contacts_list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.button_footer {
+  align-self: start;
+  justify-self: center;
+}
+
+.footer_copyright {
+  text-align: center;
+}
+
 .section_404 {
   position: relative;
   padding: 14.375rem 0;

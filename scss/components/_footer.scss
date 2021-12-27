@@ -1,1 +1,46 @@
+.footer {
+  padding: rem(40) 0 rem(40) 0;
+  background-color: $black;
 
+  .container {
+    display: grid;
+    gap: rem(40);
+  }
+}
+
+.footer_wrapper {
+  display: grid;
+  @media screen and (min-width: rem($tablet)) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: rem(136);
+  }
+
+  .footer_title {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+}
+
+.title_footer_wrapper {
+  display: grid;
+  gap: rem(16);
+  align-content: start;
+}
+.info_list {
+  display: grid;
+  gap: rem(8);
+}
+
+.contacts_list {
+  display: grid;
+  gap: rem(8);
+}
+
+.button_footer {
+  align-self: start;
+  justify-self: center;
+}
+
+.footer_copyright {
+  text-align: center;
+}
