@@ -228,7 +228,7 @@
 }
 
 .form_error {
-  position: relative;
+  position: absolute;
   color: #ff0000;
   text-align: left;
   font-size: rem(10);
@@ -236,24 +236,26 @@
   display: block;
   margin-top: 2px;
   display: none;
+}
 
-  &::after {
-    position: absolute;
-    content: "!";
-    color: #ff0000;
-    display: inline-block;
-    font-size: rem(14);
-    line-height: rem(20);
-    left: 98%;
-    bottom: 115%;
-  }
+.form_error_mark {
+  position: absolute;
+  content: "";
+  color: #ff0000;
+  display: block;
+  font-size: rem(14);
+  line-height: rem(20);
+  display: none;
 }
 
 input:invalid:not(:placeholder-shown) {
-  // color: #ff0000;
   border-bottom-color: #ff0000;
 }
 
 input:invalid:not(:placeholder-shown) + .form_error {
+  display: block;
+}
+
+input:invalid:not(:placeholder-shown) + .form_error_mark {
   display: block;
 }
