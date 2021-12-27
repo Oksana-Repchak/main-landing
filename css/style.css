@@ -168,10 +168,10 @@ summary {
   display: list-item;
 }
 
-.card_button, .form_button, .button_black, .button_orange {
+.button_white, .card_button, .form_button, .button_black, .button_orange {
   cursor: pointer;
-  margin: 0;
   border: none;
+  margin: 0;
   border-radius: 0.5rem;
   text-align: center;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -375,15 +375,14 @@ section {
   color: #ffffff;
   background-color: inherit;
   border: none;
+  outline: none;
 }
 
-.language_select:focus {
+.language_select:hover {
   cursor: pointer;
   border: none;
   outline: none;
-  border: none;
-  color: black;
-  background-color: #ffffff;
+  color: #e85e23;
   filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.09));
 }
 
@@ -1397,6 +1396,155 @@ section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
+}
+
+.section_404 {
+  position: relative;
+  padding: 14.375rem 0;
+}
+@media screen and (min-width: 48rem) {
+  .section_404 {
+    padding: 12.5rem 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .section_404 {
+    padding: 8.625rem 0;
+  }
+}
+.section_404 .container {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .section_404 .container {
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .section_404 .container {
+    gap: 2.5rem;
+  }
+}
+.section_404::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  min-width: 33.5rem;
+  min-height: 37.5rem;
+  background-image: url(./../images/404_befor.png);
+  filter: blur(10px);
+  left: -13.25rem;
+  bottom: 21.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .section_404::before {
+    top: 20.25rem;
+    right: 25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .section_404::before {
+    min-width: 50.25rem;
+    min-height: 56.25rem;
+  }
+}
+.section_404::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url(./../images/pattern_hero2.png);
+  min-width: 35.625rem;
+  min-height: 36.75rem;
+  filter: blur(7px);
+  left: -12.875rem;
+  bottom: -0.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .section_404::after {
+    min-width: 75rem;
+    min-height: 35.625rem;
+    left: -25rem;
+    bottom: 18.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .section_404::after {
+    min-height: 38.75rem;
+    left: 68.75rem;
+  }
+}
+
+.wrapper_title_404 {
+  display: grid;
+  gap: 3rem;
+  justify-self: center;
+}
+@media screen and (min-width: 80rem) {
+  .wrapper_title_404 {
+    gap: 4.5rem;
+  }
+}
+
+.title_404 {
+  font-family: Montserrat;
+  font-size: 9.375rem;
+  line-height: 9.375rem;
+  color: #000000;
+  justify-self: center;
+}
+@media screen and (min-width: 48rem) {
+  .title_404 {
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .title_404 {
+    font-size: 18.75rem;
+    line-height: 18.75rem;
+  }
+}
+
+.desc_404 {
+  font-weight: 700;
+  color: #333333;
+  justify-self: center;
+}
+
+.wrapper_button_404 {
+  display: grid;
+  gap: 0.75rem;
+  justify-self: center;
+  grid-auto-flow: column;
+}
+@media screen and (min-width: 48rem) {
+  .wrapper_button_404 {
+    gap: 2rem;
+  }
+}
+
+.button_white {
+  padding: 0.75rem 2.25rem;
+  box-shadow: 0px 0px 0px 0.0625rem;
+  color: #e85e23;
+  background-color: #ffffff;
+}
+.button_white:hover, .button_white:focus {
+  color: #ffffff;
+  background-color: #e85e23;
+  box-shadow: none;
+}
+@media screen and (min-width: 48rem) {
+  .button_white {
+    padding: 0.75rem 3.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
