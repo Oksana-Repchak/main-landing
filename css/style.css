@@ -415,7 +415,7 @@ section {
   background-repeat: no-repeat;
   display: inline-block;
   width: 26.875rem;
-  background-image: url(./../images/pattern_hero1.png);
+  background-image: url("./../images/pattern_hero1.png");
 }
 @media screen and (min-width: 48rem) {
   .hero::before {
@@ -438,7 +438,7 @@ section {
   display: inline-block;
   width: 35.625rem;
   height: 36.75rem;
-  background-image: url(./../images/pattern_hero2.png);
+  background-image: url("./../images/pattern_hero2.png");
 }
 @media screen and (min-width: 48rem) {
   .hero::after {
@@ -1266,6 +1266,9 @@ section {
   color: #c4c4c4;
 }
 
+.carousel__button.is-prev {
+  z-index: 10;
+}
 @media screen and (min-width: 48rem) {
   .carousel__button.is-prev {
     left: 30.625rem;
@@ -1273,10 +1276,13 @@ section {
 }
 @media screen and (min-width: 80rem) {
   .carousel__button.is-prev {
-    left: 43rem;
+    left: 42.5rem;
   }
 }
 
+.carousel__button.is-next {
+  z-index: 10;
+}
 @media screen and (min-width: 48rem) {
   .carousel__button.is-next {
     right: 0.5rem;
@@ -1290,7 +1296,7 @@ section {
 
 .carousel__button.is-prev,
 .carousel__button.is-next {
-  top: 97%;
+  top: 96%;
   transition: 0.2s ease-in-out;
 }
 .carousel__button.is-prev:hover,
@@ -1298,10 +1304,85 @@ section {
   color: #ffffff;
 }
 
-@media screen and (max-width: 47.875rem) {
-  .reviews_subtitle {
-    margin-bottom: 4.5rem;
+.reviews .container {
+  display: grid;
+}
+@media screen and (min-width: 48rem) {
+  .reviews .container {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
   }
+}
+
+.carousel_reviews .carousel__slide {
+  padding-top: 34px;
+  padding-left: 42px;
+}
+
+.reviews_subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.reviews_description {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.reviews_description::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  width: 7rem;
+  height: 6rem;
+  top: -34px;
+  left: -42px;
+  background-image: url("./../images/quotes.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reviews_caption {
+  display: flex;
+  align-items: center;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #111111;
+}
+.reviews_caption::before {
+  content: "";
+  margin-right: 16px;
+  background-color: #111111;
+  display: inline-block;
+  width: 3rem;
+  height: 0.0625rem;
+}
+
+.carousel_reviews .carousel_number {
+  color: #111111;
+}
+.carousel_reviews .carousel__nav {
+  position: relative;
+  top: -16px;
+  left: 32px;
+}
+.carousel_reviews .carousel__button.is-prev,
+.carousel_reviews .carousel__button.is-next {
+  position: absolute;
+  color: #c4c4c4;
+}
+.carousel_reviews .carousel__button.is-prev:hover,
+.carousel_reviews .carousel__button.is-next:hover {
+  color: #111111;
+}
+.carousel_reviews .carousel__button.is-prev {
+  left: 44.5rem;
+}
+.carousel_reviews .carousel__button.is-next {
+  right: 2rem;
 }
 
 .answers .container {

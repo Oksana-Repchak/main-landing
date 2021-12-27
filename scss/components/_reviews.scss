@@ -1,5 +1,103 @@
+.reviews {
+  .container {
+    display: grid;
+    // align-items: center;
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: rem(32);
+    }
+  }
+}
+
+.carousel_reviews {
+  .carousel__slide {
+    padding-top: 34px;
+    padding-left: 42px;
+  }
+}
+
+// .wrapper_subtitle_reviews {
+// }
+
 .reviews_subtitle {
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-bottom: rem(72);
+  display: flex;
+  align-items: center;
+}
+
+.reviews_description {
+  position: relative;
+  margin-bottom: rem(24);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    width: rem(112);
+    height: rem(96);
+    top: -34px;
+    left: -42px;
+
+    background-image: url("./../images/quotes.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // @media screen and (min-width: rem($tablet)) {
+    //   height: rem(570);
+    // }
+    // @media screen and (min-width: rem($desktop)) {
+    //   height: rem(620);
+    // }
+  }
+}
+
+.reviews_caption {
+  display: flex;
+  align-items: center;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: rem(32);
+
+  text-transform: uppercase;
+
+  color: $black;
+
+  &::before {
+    content: "";
+    margin-right: 16px;
+    background-color: $black;
+    display: inline-block;
+    width: rem(48);
+    height: rem(1);
+  }
+}
+
+.carousel_reviews {
+  .carousel_number {
+    color: $black;
+  }
+
+  .carousel__nav {
+    position: relative;
+    top: -16px;
+    left: 32px;
+  }
+
+  .carousel__button.is-prev,
+  .carousel__button.is-next {
+    position: absolute;
+    color: #c4c4c4;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .carousel__button.is-prev {
+    left: rem(712);
+  }
+  .carousel__button.is-next {
+    right: rem(32);
   }
 }

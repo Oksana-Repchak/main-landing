@@ -74,16 +74,20 @@
 }
 
 .carousel__button.is-prev {
+  z-index: 10;
+
   @media screen and (min-width: rem($tablet)) {
     left: rem(490);
   }
 
   @media screen and (min-width: rem($desktop)) {
-    left: rem(688);
+    left: rem(680);
   }
 }
 
 .carousel__button.is-next {
+  z-index: 10;
+
   @media screen and (min-width: rem($tablet)) {
     right: rem(8);
   }
@@ -94,7 +98,7 @@
 
 .carousel__button.is-prev,
 .carousel__button.is-next {
-  top: 97%;
+  top: 96%;
   transition: $transition;
 
   &:hover {

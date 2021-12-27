@@ -28,7 +28,7 @@
     @media screen and (min-width: rem($desktop)) {
       height: rem(620);
     }
-    background-image: url(./../images/pattern_hero1.png);
+    background-image: url("./../images/pattern_hero1.png");
   }
 
   &::after {
@@ -49,7 +49,7 @@
     @media screen and (min-width: rem($desktop)) {
       height: rem(620);
     }
-    background-image: url(./../images/pattern_hero2.png);
+    background-image: url("./../images/pattern_hero2.png");
   }
 }
 
