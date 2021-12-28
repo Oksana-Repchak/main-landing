@@ -5,6 +5,14 @@
 
   background-color: $black;
 
+  @media screen and (min-width: rem($tablet)) {
+    padding-bottom: rem(72);
+  }
+  @media screen and (min-width: rem($desktop)) {
+    padding-top: rem(80);
+    padding-bottom: rem(172);
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: rem(48);
@@ -18,15 +26,16 @@
     z-index: 10;
     content: "";
     top: 0;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
     width: rem(430);
+
     @media screen and (min-width: rem($tablet)) {
-      height: rem(570);
+      min-height: rem(570);
     }
     @media screen and (min-width: rem($desktop)) {
-      height: rem(620);
+      min-height: rem(620);
     }
     background-image: url("./../images/pattern_hero1.png");
   }
@@ -35,21 +44,34 @@
     position: absolute;
     z-index: 10;
     content: "";
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    top: 0;
-    right: 0;
     display: inline-block;
     width: rem(570);
     height: rem(588);
+    background-image: url("./../images/pattern_hero2.png");
+    top: rem(12);
+    filter: blur(2px);
+
     @media screen and (min-width: rem($tablet)) {
-      width: rem(1200);
-      height: rem(570);
+      width: rem(580);
+      height: rem(580);
+      left: rem(456);
+      top: rem(-76);
+
+      filter: blur(7px);
+      transform: rotate(8.12deg);
     }
     @media screen and (min-width: rem($desktop)) {
-      height: rem(620);
+      width: rem(1180);
+      height: rem(1180);
+      bottom: rem(-250);
+      left: rem(400);
+      top: rem(-200);
+
+      filter: blur(4px);
+      transform: rotate(-20deg);
     }
-    background-image: url("./../images/pattern_hero2.png");
   }
 }
 

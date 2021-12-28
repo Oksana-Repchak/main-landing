@@ -402,6 +402,17 @@ section {
   padding-bottom: 5.625rem;
   background-color: #111111;
 }
+@media screen and (min-width: 48rem) {
+  .hero {
+    padding-bottom: 4.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 10.75rem;
+  }
+}
 .hero .container {
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -416,7 +427,7 @@ section {
   z-index: 10;
   content: "";
   top: 0;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
   width: 26.875rem;
@@ -424,36 +435,46 @@ section {
 }
 @media screen and (min-width: 48rem) {
   .hero::before {
-    height: 35.625rem;
+    min-height: 35.625rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .hero::before {
-    height: 38.75rem;
+    min-height: 38.75rem;
   }
 }
 .hero::after {
   position: absolute;
   z-index: 10;
   content: "";
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  top: 0;
-  right: 0;
   display: inline-block;
   width: 35.625rem;
   height: 36.75rem;
   background-image: url("./../images/pattern_hero2.png");
+  top: 0.75rem;
+  filter: blur(2px);
 }
 @media screen and (min-width: 48rem) {
   .hero::after {
-    width: 75rem;
-    height: 35.625rem;
+    width: 36.25rem;
+    height: 36.25rem;
+    left: 28.5rem;
+    top: -4.75rem;
+    filter: blur(7px);
+    transform: rotate(8.12deg);
   }
 }
 @media screen and (min-width: 80rem) {
   .hero::after {
-    height: 38.75rem;
+    width: 73.75rem;
+    height: 73.75rem;
+    bottom: -15.625rem;
+    left: 25rem;
+    top: -12.5rem;
+    filter: blur(4px);
+    transform: rotate(-20deg);
   }
 }
 
