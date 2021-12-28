@@ -105,6 +105,11 @@
   border: rem(1) solid #c4c4c4;
   border-radius: rem(6);
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.09);
+  }
+
   @media screen and (min-width: rem($tablet)) {
     padding: rem(48) rem(48);
     gap: rem(40);

@@ -1,0 +1,219 @@
+// .baner {
+// }
+
+// ______about_project section______
+.about_project {
+  .container {
+    display: grid;
+    gap: rem(32);
+
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
+.wrapper_about_project {
+  display: grid;
+  gap: rem(24);
+}
+
+.about_subtitle {
+  align-self: start;
+}
+
+// ________tasks section________
+
+.tasks {
+  .container {
+    display: grid;
+    gap: rem(64);
+
+    @media screen and (min-width: rem($tablet)) {
+      gap: rem(88);
+    }
+    @media screen and (min-width: rem($desktop)) {
+      gap: rem(160);
+    }
+  }
+
+  .wrapper_tasks_title {
+    display: grid;
+    gap: rem(32);
+
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  .ideas_list {
+    @media screen and (min-width: rem($tablet)) {
+      gap: rem(92);
+    }
+  }
+
+  .ideas_number {
+    top: rem(-40);
+    left: rem(-90);
+  }
+}
+
+.wrapper_tasks {
+  display: grid;
+  gap: rem(72);
+}
+
+// ________adaptation section___________
+
+.adaptation {
+  .container {
+    display: grid;
+    gap: rem(32);
+  }
+}
+
+.wrapper_title_text {
+  display: grid;
+  gap: rem(32);
+
+  @media screen and (min-width: rem($tablet)) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.wrapper_adaptation {
+  display: grid;
+  gap: rem(40);
+
+  @media screen and (min-width: rem($tablet)) {
+    gap: rem(64);
+  }
+}
+
+.wrapper_images {
+  display: grid;
+  gap: rem(40);
+  justify-items: center;
+
+  @media screen and (min-width: rem($tablet)) {
+    gap: rem(64);
+  }
+  @media screen and (min-width: rem($desktop)) {
+    gap: rem(190);
+    grid-auto-flow: column;
+  }
+
+  .adaptiv_img {
+    @media screen and (min-width: rem($desktop)) {
+      grid-column-start: 2;
+    }
+  }
+}
+
+.wrapper_adaptation_title {
+  display: grid;
+  gap: rem(24);
+}
+
+.wrapper_table_link {
+  display: grid;
+  gap: rem(40);
+
+  @media screen and (min-width: rem($tablet)) {
+    grid-auto-flow: column;
+    gap: rem(112);
+  }
+}
+
+.adaptation_link {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    background-image: url("./../images/arrow_r.svg");
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    margin-left: rem(16);
+  }
+}
+
+.wrapper_link_desc {
+  display: grid;
+  gap: rem(8);
+  @media screen and (min-width: rem($tablet)) {
+    justify-items: start;
+  }
+}
+
+.adaptation_desc {
+  text-align: center;
+}
+
+.wrapper_link {
+  display: flex;
+  justify-content: center;
+  gap: rem(16);
+}
+
+.adaptation_link_previous,
+.adaptation_link_next {
+  display: flex;
+  align-items: center;
+  border-radius: rem(8);
+  text-align: center;
+  box-shadow: 0px 0px 0px rem(1);
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
+}
+
+.adaptation_link_previous {
+  color: $accent_color;
+  padding: rem(12) rem(20);
+
+  @media screen and (min-width: rem($tablet)) {
+    padding: rem(12) rem(48);
+  }
+
+  &:hover,
+  :focus {
+    background-color: $accent_color;
+    color: $white;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("./../images/arrow_left.svg");
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    margin-right: rem(16);
+  }
+}
+
+.adaptation_link_next {
+  color: $white;
+  background-color: $accent_color;
+  padding: rem(12) rem(32);
+  @media screen and (min-width: rem($tablet)) {
+    padding: rem(12) rem(48);
+  }
+
+  &:hover,
+  :focus {
+    color: $accent_color;
+    background-color: $white;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("./../images/arrow_next_w.svg");
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    margin-left: rem(16);
+  }
+}

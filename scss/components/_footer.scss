@@ -11,8 +11,11 @@
 .footer_wrapper {
   display: grid;
   @media screen and (min-width: rem($tablet)) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: rem(136);
+  }
+  @media screen and (min-width: rem($desktop)) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .footer_title {
