@@ -1261,18 +1261,33 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   background-color: #111111;
 }
 .portfolio .container {
-  display: grid;
-  gap: 2rem;
-  align-items: start;
+  padding: 0 0 0 1.25rem;
 }
 @media screen and (min-width: 48rem) {
   .portfolio .container {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
 }
 .portfolio .container .title_line::after {
   background-color: #ffffff;
+}
+@media screen and (max-width: 47.875rem) {
+  .portfolio .portfolio_title {
+    margin-bottom: 2rem;
+  }
+}
+.portfolio .carousel__slide {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+@media screen and (min-width: 80rem) {
+  .portfolio .carousel__slide {
+    padding: 1rem;
+    width: var(--carousel-slide-width, 40%);
+  }
 }
 
 .wrapper_portfolio_title {
@@ -1306,16 +1321,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 .carousel_link {
   display: grid;
   row-gap: 1.5rem;
-}
-
-.carousel__slide {
-  width: auto;
-  padding: 1rem 0.5rem 1rem 0.5rem;
-}
-@media screen and (min-width: 80rem) {
-  .carousel__slide {
-    padding: 1rem;
-  }
 }
 
 .carousel_number {
@@ -1371,10 +1376,11 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .reviews .container {
-  display: grid;
+  padding: 0 0 0 1.25rem;
 }
 @media screen and (min-width: 48rem) {
   .reviews .container {
+    display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
@@ -1383,6 +1389,17 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 .carousel_reviews .carousel__slide {
   padding-top: 34px;
   padding-left: 42px;
+  width: var(--carousel-slide-width, 100%);
+}
+@media screen and (min-width: 48rem) {
+  .carousel_reviews .carousel__slide {
+    width: var(--carousel-slide-width, 80%);
+  }
+}
+@media screen and (min-width: 80rem) {
+  .carousel_reviews .carousel__slide {
+    width: var(--carousel-slide-width, 50%);
+  }
 }
 
 .reviews_subtitle {

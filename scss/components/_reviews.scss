@@ -1,8 +1,10 @@
 .reviews {
   .container {
-    display: grid;
+    padding: 0 0 0 rem(20);
+
     // align-items: center;
     @media screen and (min-width: rem($tablet)) {
+      display: grid;
       grid-template-columns: 1fr 2fr;
       column-gap: rem(32);
     }
@@ -13,11 +15,19 @@
   .carousel__slide {
     padding-top: 34px;
     padding-left: 42px;
+    width: var(--carousel-slide-width, 100%);
+
+    // @media screen and (max-width: rem($tablet - 2)) {
+    //   width: var(--carousel-slide-width, 100%);
+    // }
+    @media screen and (min-width: rem($tablet)) {
+      width: var(--carousel-slide-width, 80%);
+    }
+    @media screen and (min-width: rem($desktop)) {
+      width: var(--carousel-slide-width, 50%);
+    }
   }
 }
-
-// .wrapper_subtitle_reviews {
-// }
 
 .reviews_subtitle {
   display: flex;
