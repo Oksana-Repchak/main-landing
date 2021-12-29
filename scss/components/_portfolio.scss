@@ -26,6 +26,10 @@
 
   .carousel__slide {
     padding: rem(16) rem(8) rem(16) rem(8);
+    width: var(--carousel-slide-width);
+    @media screen and (min-width: rem($tablet)) {
+      width: var(--carousel-slide-width, 70%);
+    }
 
     @media screen and (min-width: rem($desktop)) {
       padding: rem(16);
@@ -67,9 +71,17 @@
 }
 
 .carousel_number {
-  text-align: end;
-  margin-right: rem(48);
+  font-size: rem(16);
+  line-height: rem(24);
   color: #c4c4c4;
+  // margin-left: 75%;
+  @media screen and (max-width: rem($tablet - 2)) {
+    margin-left: 75%;
+  }
+
+  @media screen and (min-width: rem($tablet)) {
+    margin-left: 80%;
+  }
 }
 
 #myCarousel {
@@ -83,30 +95,23 @@
 
 .carousel__button.is-prev {
   z-index: 10;
-
-  @media screen and (min-width: rem($tablet)) {
-    left: rem(490);
-  }
-
-  @media screen and (min-width: rem($desktop)) {
-    left: rem(680);
-  }
+  left: 70%;
 }
 
 .carousel__button.is-next {
   z-index: 10;
-
+  right: 9%;
   @media screen and (min-width: rem($tablet)) {
-    right: rem(8);
+    right: 16%;
   }
   @media screen and (min-width: rem($desktop)) {
-    right: rem(16);
+    right: 17.5%;
   }
 }
 
 .carousel__button.is-prev,
 .carousel__button.is-next {
-  top: 96%;
+  top: 97%;
   transition: $transition;
 
   &:hover {

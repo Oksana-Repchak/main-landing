@@ -1282,6 +1282,12 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 .portfolio .carousel__slide {
   padding: 1rem 0.5rem 1rem 0.5rem;
+  width: var(--carousel-slide-width);
+}
+@media screen and (min-width: 48rem) {
+  .portfolio .carousel__slide {
+    width: var(--carousel-slide-width, 70%);
+  }
 }
 @media screen and (min-width: 80rem) {
   .portfolio .carousel__slide {
@@ -1324,9 +1330,19 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .carousel_number {
-  text-align: end;
-  margin-right: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #c4c4c4;
+}
+@media screen and (max-width: 47.875rem) {
+  .carousel_number {
+    margin-left: 75%;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .carousel_number {
+    margin-left: 80%;
+  }
 }
 
 #myCarousel {
@@ -1339,35 +1355,27 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 
 .carousel__button.is-prev {
   z-index: 10;
-}
-@media screen and (min-width: 48rem) {
-  .carousel__button.is-prev {
-    left: 30.625rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .carousel__button.is-prev {
-    left: 42.5rem;
-  }
+  left: 70%;
 }
 
 .carousel__button.is-next {
   z-index: 10;
+  right: 9%;
 }
 @media screen and (min-width: 48rem) {
   .carousel__button.is-next {
-    right: 0.5rem;
+    right: 16%;
   }
 }
 @media screen and (min-width: 80rem) {
   .carousel__button.is-next {
-    right: 1rem;
+    right: 17.5%;
   }
 }
 
 .carousel__button.is-prev,
 .carousel__button.is-next {
-  top: 96%;
+  top: 97%;
   transition: 0.2s ease-in-out;
 }
 .carousel__button.is-prev:hover,
@@ -1384,6 +1392,35 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
+}
+
+#carousel_reviews {
+  --carousel-button-width: rem(24);
+  --carousel-button-height: rem(24);
+  --carousel-button-svg-width: rem(24);
+  --carousel-button-svg-height: rem(24);
+  color: #c4c4c4;
+}
+
+.carousel_reviews .carousel_number {
+  color: #111111;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.carousel_reviews .carousel__nav {
+  position: relative;
+  top: -16px;
+  left: 32px;
+}
+.carousel_reviews .carousel__button.is-prev:hover,
+.carousel_reviews .carousel__button.is-next:hover {
+  color: #111111;
+}
+.carousel_reviews .carousel__button.is-prev {
+  left: 44.5rem;
+}
+.carousel_reviews .carousel__button.is-next {
+  right: 2rem;
 }
 
 .carousel_reviews .carousel__slide {
@@ -1442,30 +1479,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   display: inline-block;
   width: 3rem;
   height: 0.0625rem;
-}
-
-.carousel_reviews .carousel_number {
-  color: #111111;
-}
-.carousel_reviews .carousel__nav {
-  position: relative;
-  top: -16px;
-  left: 32px;
-}
-.carousel_reviews .carousel__button.is-prev,
-.carousel_reviews .carousel__button.is-next {
-  position: absolute;
-  color: #c4c4c4;
-}
-.carousel_reviews .carousel__button.is-prev:hover,
-.carousel_reviews .carousel__button.is-next:hover {
-  color: #111111;
-}
-.carousel_reviews .carousel__button.is-prev {
-  left: 44.5rem;
-}
-.carousel_reviews .carousel__button.is-next {
-  right: 2rem;
 }
 
 .answers .container {

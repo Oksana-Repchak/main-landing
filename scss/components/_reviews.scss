@@ -11,15 +11,51 @@
   }
 }
 
+#carousel_reviews {
+  --carousel-button-width: rem(24);
+  --carousel-button-height: rem(24);
+
+  --carousel-button-svg-width: rem(24);
+  --carousel-button-svg-height: rem(24);
+  color: #c4c4c4;
+}
+.carousel_reviews {
+  .carousel_number {
+    color: $black;
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+  .carousel__nav {
+    position: relative;
+    top: -16px;
+    left: 32px;
+  }
+
+  .carousel__button.is-prev,
+  .carousel__button.is-next {
+    // position: absolute;
+    // color: #c4c4c4;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .carousel__button.is-prev {
+    left: rem(712);
+  }
+  .carousel__button.is-next {
+    right: rem(32);
+  }
+}
+
 .carousel_reviews {
   .carousel__slide {
     padding-top: 34px;
     padding-left: 42px;
     width: var(--carousel-slide-width, 100%);
 
-    // @media screen and (max-width: rem($tablet - 2)) {
-    //   width: var(--carousel-slide-width, 100%);
-    // }
     @media screen and (min-width: rem($tablet)) {
       width: var(--carousel-slide-width, 80%);
     }
@@ -51,13 +87,6 @@
     background-image: url("./../images/quotes.svg");
     background-size: cover;
     background-repeat: no-repeat;
-
-    // @media screen and (min-width: rem($tablet)) {
-    //   height: rem(570);
-    // }
-    // @media screen and (min-width: rem($desktop)) {
-    //   height: rem(620);
-    // }
   }
 }
 
@@ -80,34 +109,5 @@
     display: inline-block;
     width: rem(48);
     height: rem(1);
-  }
-}
-
-.carousel_reviews {
-  .carousel_number {
-    color: $black;
-  }
-
-  .carousel__nav {
-    position: relative;
-    top: -16px;
-    left: 32px;
-  }
-
-  .carousel__button.is-prev,
-  .carousel__button.is-next {
-    position: absolute;
-    color: #c4c4c4;
-
-    &:hover {
-      color: $black;
-    }
-  }
-
-  .carousel__button.is-prev {
-    left: rem(712);
-  }
-  .carousel__button.is-next {
-    right: rem(32);
   }
 }
