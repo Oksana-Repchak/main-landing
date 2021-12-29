@@ -74,14 +74,7 @@
   font-size: rem(16);
   line-height: rem(24);
   color: #c4c4c4;
-  // margin-left: 75%;
-  @media screen and (max-width: rem($tablet - 2)) {
-    margin-left: 75%;
-  }
-
-  @media screen and (min-width: rem($tablet)) {
-    margin-left: 80%;
-  }
+  margin-left: 75%;
 }
 
 #myCarousel {
@@ -95,17 +88,36 @@
 
 .carousel__button.is-prev {
   z-index: 10;
-  left: 70%;
+  left: 65%;
+
+  @media screen and (min-width: rem(500)) {
+    left: 66%;
+  }
+  @media screen and (min-width: rem(600)) {
+    left: 68%;
+  }
+  @media screen and (min-width: rem($tablet - 2 )) {
+    left: 69%;
+  }
+  @media screen and (min-width: rem($desktop)) {
+    left: 71%;
+  }
 }
 
 .carousel__button.is-next {
   z-index: 10;
   right: 9%;
+  @media screen and (min-width: rem(500)) {
+    right: 12%;
+  }
+  @media screen and (min-width: rem(600)) {
+    right: 15%;
+  }
   @media screen and (min-width: rem($tablet)) {
     right: 16%;
   }
   @media screen and (min-width: rem($desktop)) {
-    right: 17.5%;
+    right: 18.5%;
   }
 }
 
