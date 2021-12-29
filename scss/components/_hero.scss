@@ -32,15 +32,25 @@
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
-    width: rem(430);
+    width: rem(536);
+    height: rem(600);
+    background-image: url("./../images/pattern_hero1.png");
+    filter: blur(10px);
+    transform: rotate(82.58deg);
+    top: -10%;
+    left: -15%;
 
     @media screen and (min-width: rem($tablet)) {
-      min-height: rem(570);
+      top: 40%;
+      left: -10%;
     }
     @media screen and (min-width: rem($desktop)) {
-      min-height: rem(620);
+      width: rem(800);
+      height: rem(900);
+      transform: rotate(80deg);
+      top: 30%;
+      left: -5%;
     }
-    background-image: url("./../images/pattern_hero1.png");
   }
 
   &::after {
@@ -53,23 +63,21 @@
     width: rem(570);
     height: rem(588);
     background-image: url("./../images/pattern_hero2.png");
-    top: rem(12);
+    top: 20%;
+    left: 0;
     filter: blur(2px);
+    transform: rotate(8.12deg);
 
     @media screen and (min-width: rem($tablet)) {
-      left: rem(456);
-      top: rem(-76);
-
-      filter: blur(7px);
-      transform: rotate(8.12deg);
+      top: 20%;
+      left: 30%;
+      filter: blur(2px);
     }
     @media screen and (min-width: rem($desktop)) {
       width: rem(1180);
       height: rem(1180);
-      left: rem(400);
-      top: rem(-200);
-
-      filter: blur(4px);
+      top: -10%;
+      left: 42%;
       transform: rotate(-20deg);
     }
   }

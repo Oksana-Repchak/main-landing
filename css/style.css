@@ -438,17 +438,27 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  width: 26.875rem;
+  width: 33.5rem;
+  height: 37.5rem;
   background-image: url("./../images/pattern_hero1.png");
+  filter: blur(10px);
+  transform: rotate(82.58deg);
+  top: -10%;
+  left: -15%;
 }
 @media screen and (min-width: 48rem) {
   .hero::before {
-    min-height: 35.625rem;
+    top: 40%;
+    left: -10%;
   }
 }
 @media screen and (min-width: 80rem) {
   .hero::before {
-    min-height: 38.75rem;
+    width: 50rem;
+    height: 56.25rem;
+    transform: rotate(80deg);
+    top: 30%;
+    left: -5%;
   }
 }
 .hero::after {
@@ -461,24 +471,24 @@ section {
   width: 35.625rem;
   height: 36.75rem;
   background-image: url("./../images/pattern_hero2.png");
-  top: 0.75rem;
+  top: 20%;
+  left: 0;
   filter: blur(2px);
+  transform: rotate(8.12deg);
 }
 @media screen and (min-width: 48rem) {
   .hero::after {
-    left: 28.5rem;
-    top: -4.75rem;
-    filter: blur(7px);
-    transform: rotate(8.12deg);
+    top: 20%;
+    left: 30%;
+    filter: blur(2px);
   }
 }
 @media screen and (min-width: 80rem) {
   .hero::after {
     width: 73.75rem;
     height: 73.75rem;
-    left: 25rem;
-    top: -12.5rem;
-    filter: blur(4px);
+    top: -10%;
+    left: 42%;
     transform: rotate(-20deg);
   }
 }

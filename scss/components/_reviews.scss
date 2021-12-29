@@ -21,9 +21,6 @@
     @media screen and (min-width: rem($tablet)) {
       width: var(--carousel-slide-width, 50%);
     }
-    // @media screen and (min-width: rem($desktop)) {
-    //   width: var(--carousel-slide-width, 50%);
-    // }
   }
 }
 
@@ -85,7 +82,6 @@
 
 .carousel_reviews {
   .carousel_number {
-    // margin-left: 76%;
     color: $black;
 
     @media screen and (min-width: rem($tablet)) {
@@ -96,18 +92,11 @@
     }
   }
 
-  // .carousel__nav {
-  //   position: relative;
-  //   top: -16px;
-  //   left: 32px;
-  // }
-
   .carousel__button.is-prev,
   .carousel__button.is-next {
     top: 97%;
     transition: $transition;
 
-    // color: #c4c4c4;
     &:hover {
       color: $black;
     }
