@@ -1,16 +1,17 @@
 .header {
-  padding-top: rem(16);
-  padding-bottom: rem(16);
-  background-color: $black;
+  padding-top: 0;
+  padding-bottom: rem(72);
+  @media screen and (min-width: rem($tablet)) {
+    padding-bottom: rem(64);
+  }
+  @media screen and (min-width: rem($tablet)) {
+    padding-bottom: rem(80);
+  }
 
   .container {
-    grid-template-columns: 1fr 4fr;
-
-    @media screen and (min-width: rem($tablet)) {
-      grid-template-columns: 1fr 4fr auto;
-      grid-column-gap: rem(48);
-    }
-    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
   }
 
   .button_black {

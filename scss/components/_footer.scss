@@ -13,6 +13,10 @@
   @media screen and (min-width: rem($tablet)) {
     grid-template-columns: 1fr 1fr;
     gap: rem(136);
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
   }
   @media screen and (min-width: rem($desktop)) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -42,6 +46,11 @@
 .button_footer {
   align-self: start;
   justify-self: center;
+
+  // @media screen and (min-width: rem($tablet)) {
+  // grid-row-start: 1;
+  //   grid-column-start: 2;
+  // }
 }
 
 .footer_copyright {

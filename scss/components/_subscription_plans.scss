@@ -157,26 +157,45 @@
 .card_list {
   display: grid;
   gap: rem(16);
-  text-align: left;
+  justify-items: start;
 
-  padding: 0 rem(32);
-  list-style: url("./../images/list_elipse_outline_gr.svg");
+  // padding: 0 rem(32);
+  // list-style: url("./../images/list_elipse_outline_gr.svg");
 
   @media screen and (min-width: rem($tablet)) {
-    padding: 0 0 0 rem(16);
+    // padding: 0 0 0 rem(16);
   }
 
   .item {
-    &:first-child {
-      list-style: url("./../images/list_elipse_outline.svg");
-    }
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
 
-    &.list_style_orange:nth-child(-n + 3) {
-      list-style: url("./../images/list_elipse_outline.svg");
+    &::before {
+      content: "";
+      width: rem(18);
+      height: rem(18);
+      background-color: #c4c4c4;
+      border-radius: 50%;
+      border: 5px solid $white;
+      box-shadow: 0px 0px 0px rem(1) #c4c4c4;
     }
-    &.list_style_orange {
-      list-style: url("./../images/list_elipse_outline.svg");
+    &.accent_item::before {
+      background-color: $accent_color;
+      border: 4px solid $white;
+      box-shadow: 0px 0px 0px rem(1) $accent_color;
     }
+    // &:first-child {
+    //   list-style: url("./../images/list_elipse_outline.svg");
+    // }
+
+    // &.list_style_orange:nth-child(-n + 3) {
+    //   list-style: url("./../images/list_elipse_outline.svg");
+    // }
+    // &.list_style_orange {
+    //   list-style: url("./../images/list_elipse_outline.svg");
+    // }
   }
 }
 
@@ -196,7 +215,7 @@
   }
 }
 
-.payment {
+.payment_text {
   font-size: rem(12);
   line-height: rem(20);
 }
