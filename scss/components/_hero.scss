@@ -1,5 +1,7 @@
 .hero {
   position: relative;
+  z-index: 1;
+
   padding-top: rem(64);
   padding-bottom: rem(90);
 
@@ -23,7 +25,7 @@
 
   &::before {
     position: absolute;
-    z-index: 10;
+    z-index: -1;
     content: "";
     top: 0;
     background-size: contain;
@@ -42,7 +44,7 @@
 
   &::after {
     position: absolute;
-    z-index: 10;
+    z-index: -1;
     content: "";
     background-size: contain;
     background-repeat: no-repeat;

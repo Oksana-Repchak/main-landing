@@ -140,6 +140,11 @@
 
   .accent {
     color: $accent_color;
+
+    &:hover,
+    :focus {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -32,6 +32,7 @@
 
 .language_dropdown {
   position: relative;
+  z-index: 11;
   display: flex;
   justify-content: flex-end;
   gap: rem(10);
@@ -57,7 +58,7 @@
     cursor: pointer;
     border: none;
     outline: none;
-    // background-color: $white;
+    background-color: $white;
     color: $accent_color;
     filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.09));
   }

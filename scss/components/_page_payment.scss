@@ -1,0 +1,35 @@
+.payment {
+  padding: rem(56) 0 rem(80) 0;
+  .container {
+    display: grid;
+    gap: rem(32);
+    @media screen and (min-width: rem($tablet)) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
+.payment_info_list {
+  display: grid;
+  gap: rem(32);
+  align-content: start;
+}
+
+.item_link {
+  font-weight: 700;
+  &:hover,
+  :focus {
+    color: $accent_color;
+    text-decoration: underline;
+  }
+}
+
+.wrapper_payment_desc {
+  display: grid;
+  gap: rem(40);
+}
+
+.payment_desc {
+  font-size: rem(16);
+  line-height: rem(24);
+}

@@ -366,6 +366,7 @@ section {
 
 .language_dropdown {
   position: relative;
+  z-index: 11;
   display: flex;
   justify-content: flex-end;
   gap: 0.625rem;
@@ -387,6 +388,7 @@ section {
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: #ffffff;
   color: #e85e23;
   filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.09));
 }
@@ -398,6 +400,7 @@ section {
 
 .hero {
   position: relative;
+  z-index: 1;
   padding-top: 4rem;
   padding-bottom: 5.625rem;
   background-color: #111111;
@@ -424,7 +427,7 @@ section {
 }
 .hero::before {
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   content: "";
   top: 0;
   background-size: contain;
@@ -445,7 +448,7 @@ section {
 }
 .hero::after {
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
@@ -918,6 +921,10 @@ section {
 }
 .form_consent .accent {
   color: #e85e23;
+}
+.form_consent .accent:hover,
+.form_consent .accent :focus {
+  text-decoration: underline;
 }
 
 .wrapper_leave_comment {
@@ -1950,6 +1957,44 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 1rem;
+}
+
+.payment {
+  padding: 3.5rem 0 5rem 0;
+}
+.payment .container {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .payment .container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.payment_info_list {
+  display: grid;
+  gap: 2rem;
+  align-content: start;
+}
+
+.item_link {
+  font-weight: 700;
+}
+.item_link:hover,
+.item_link :focus {
+  color: #e85e23;
+  text-decoration: underline;
+}
+
+.wrapper_payment_desc {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.payment_desc {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
