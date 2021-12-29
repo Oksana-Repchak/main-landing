@@ -1783,11 +1783,15 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   }
 }
 
-.baner {
-  padding: 0;
+.header.header_portfolio {
+  padding: 0.75rem 0 0.75rem 0;
+  background-color: black;
 }
-.baner .container {
+
+.banner {
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .about_project .container {

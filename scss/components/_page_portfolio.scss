@@ -1,8 +1,14 @@
-.baner {
-  padding: 0;
-  .container {
-    padding: 0;
+.header {
+  &.header_portfolio {
+    padding: rem(12) 0 rem(12) 0;
+    background-color: black;
   }
+}
+
+.banner {
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 // ______about_project section______
