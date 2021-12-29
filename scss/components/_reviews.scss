@@ -1,67 +1,29 @@
 .reviews {
+  overflow: hidden;
   .container {
     padding: 0 0 0 rem(20);
 
-    // align-items: center;
     @media screen and (min-width: rem($tablet)) {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      column-gap: rem(32);
+      gap: rem(32);
     }
   }
 }
 
-#carousel_reviews {
-  --carousel-button-width: rem(24);
-  --carousel-button-height: rem(24);
-
-  --carousel-button-svg-width: rem(24);
-  --carousel-button-svg-height: rem(24);
-  color: #c4c4c4;
-}
 .carousel_reviews {
-  .carousel_number {
-    color: $black;
-    font-size: rem(16);
-    line-height: rem(24);
-  }
-
-  .carousel__nav {
-    position: relative;
-    top: -16px;
-    left: 32px;
-  }
-
-  .carousel__button.is-prev,
-  .carousel__button.is-next {
-    // position: absolute;
-    // color: #c4c4c4;
-
-    &:hover {
-      color: $black;
-    }
-  }
-
-  .carousel__button.is-prev {
-    left: rem(712);
-  }
-  .carousel__button.is-next {
-    right: rem(32);
-  }
-}
-
-.carousel_reviews {
+  position: relative;
   .carousel__slide {
-    padding-top: 34px;
-    padding-left: 42px;
+    padding-top: rem(34);
+    padding-left: rem(42);
     width: var(--carousel-slide-width, 100%);
 
     @media screen and (min-width: rem($tablet)) {
-      width: var(--carousel-slide-width, 80%);
-    }
-    @media screen and (min-width: rem($desktop)) {
       width: var(--carousel-slide-width, 50%);
     }
+    // @media screen and (min-width: rem($desktop)) {
+    //   width: var(--carousel-slide-width, 50%);
+    // }
   }
 }
 
@@ -81,8 +43,8 @@
     display: inline-block;
     width: rem(112);
     height: rem(96);
-    top: -34px;
-    left: -42px;
+    top: rem(-34);
+    left: rem(-42);
 
     background-image: url("./../images/quotes.svg");
     background-size: cover;
@@ -104,10 +66,84 @@
 
   &::before {
     content: "";
-    margin-right: 16px;
+    margin-right: rem(16);
     background-color: $black;
     display: inline-block;
     width: rem(48);
     height: rem(1);
+  }
+}
+
+#carousel_reviews {
+  --carousel-button-width: rem(24);
+  --carousel-button-height: rem(24);
+
+  --carousel-button-svg-width: rem(24);
+  --carousel-button-svg-height: rem(24);
+  color: #c4c4c4;
+}
+
+.carousel_reviews {
+  .carousel_number {
+    // margin-left: 76%;
+    color: $black;
+
+    @media screen and (min-width: rem($tablet)) {
+      margin-left: 64%;
+    }
+    @media screen and (min-width: rem($desktop)) {
+      margin-left: 76%;
+    }
+  }
+
+  // .carousel__nav {
+  //   position: relative;
+  //   top: -16px;
+  //   left: 32px;
+  // }
+
+  .carousel__button.is-prev,
+  .carousel__button.is-next {
+    top: 97%;
+    transition: $transition;
+
+    // color: #c4c4c4;
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .carousel__button.is-prev {
+    left: 65%;
+
+    @media screen and (min-width: rem(500)) {
+      left: 66%;
+    }
+    @media screen and (min-width: rem(600)) {
+      left: 68%;
+    }
+    @media screen and (min-width: rem($tablet)) {
+      left: 60%;
+    }
+    @media screen and (min-width: rem($desktop)) {
+      left: 71%;
+    }
+  }
+
+  .carousel__button.is-next {
+    right: 8%;
+
+    @media screen and (min-width: rem(500)) {
+      right: 11%;
+    }
+    @media screen and (min-width: rem(600)) {
+      right: 14%;
+    }
+    @media screen and (min-width: rem($tablet)) {
+      right: 29%;
+    }
+    @media screen and (min-width: rem($desktop)) {
+      right: 17.5%;
+    }
   }
 }
