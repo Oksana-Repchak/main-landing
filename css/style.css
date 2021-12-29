@@ -1777,6 +1777,13 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   }
 }
 
+.baner {
+  padding: 0;
+}
+.baner .container {
+  padding: 0;
+}
+
 .about_project .container {
   display: grid;
   gap: 2rem;
