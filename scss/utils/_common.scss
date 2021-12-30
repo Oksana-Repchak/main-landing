@@ -27,13 +27,10 @@ section {
 .container {
   margin: 0 auto;
   padding: 0 rem(20);
+  max-width: calc(rem($desktop) + rem(56));
 
   @media screen and (min-width: rem($tablet)) {
-    width: rem($tablet);
     padding: 0 rem(28);
-  }
-  @media screen and (min-width: rem($desktop)) {
-    width: rem($desktop);
   }
 }
 

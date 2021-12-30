@@ -37,7 +37,6 @@
 }
 
 // _________________accordion_______________________
-
 .button_accordion {
   border: 0;
   margin: 0;
@@ -53,8 +52,12 @@
   font-size: rem(20);
   line-height: rem(28);
   cursor: pointer;
-
   transition: all $transition;
+
+  &.border_top_none {
+    border-top: none;
+  }
+
   @media screen and (min-width: rem($desktop)) {
     font-size: rem(24);
     line-height: rem(32);
@@ -62,10 +65,10 @@
   }
 }
 
-.active_accordion,
-.button_accordion :focus {
-  border: 0;
-}
+// .active_accordion,
+// .button_accordion :focus {
+//   border: 0;
+// }
 
 .button_accordion:after {
   content: "";

@@ -29,13 +29,14 @@
   .carousel__slide {
     padding: rem(16) rem(8) rem(16) rem(8);
     width: var(--carousel-slide-width);
+
     @media screen and (min-width: rem($tablet)) {
-      width: var(--carousel-slide-width, 70%);
+      width: var(--carousel-slide-width, 68%);
     }
 
     @media screen and (min-width: rem($desktop)) {
       padding: rem(16);
-      width: var(--carousel-slide-width, 40%);
+      width: var(--carousel-slide-width, 30%);
     }
   }
 }
@@ -51,6 +52,12 @@
 .portfolio_subtitle {
   display: flex;
   align-items: center;
+}
+
+.slide_img {
+  @media screen and (min-width: rem($desktop)) {
+    min-width: rem(392);
+  }
 }
 
 .carousel_subtitle {
@@ -77,6 +84,9 @@
   line-height: rem(24);
   color: #c4c4c4;
   margin-left: 75%;
+  @media screen and (min-width: rem($desktop)) {
+    margin-left: 43%;
+  }
 }
 
 #myCarousel {
@@ -103,7 +113,7 @@
       left: 69%;
     }
     @media screen and (min-width: rem($desktop)) {
-      left: 71%;
+      left: 41%;
     }
   }
 
@@ -120,7 +130,7 @@
       right: 16%;
     }
     @media screen and (min-width: rem($desktop)) {
-      right: 18.5%;
+      right: 53.5%;
     }
   }
 

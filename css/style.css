@@ -218,16 +218,11 @@ section {
 .container {
   margin: 0 auto;
   padding: 0 1.25rem;
+  max-width: calc(80rem + 3.5rem);
 }
 @media screen and (min-width: 48rem) {
   .container {
-    width: 48rem;
     padding: 0 1.75rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .container {
-    width: 80rem;
   }
 }
 
@@ -534,9 +529,14 @@ section {
 .hero_list .item {
   padding-left: 1rem;
 }
+@media screen and (max-width: 47.875rem) {
+  .hero_list .item {
+    max-width: 75%;
+  }
+}
 @media screen and (min-width: 48rem) {
   .hero_list {
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1.3fr;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -1193,6 +1193,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .card {
+  position: relative;
   display: grid;
   gap: 1.5rem;
   padding: 1.5rem;
@@ -1210,25 +1211,36 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .card_band {
-  position: relative;
+  position: absolute;
   width: 5.625rem;
   height: 5.625rem;
   border-left: 22px solid #994a28;
   border-top: 22px solid transparent;
   border-right: 22px solid transparent;
   border-bottom: 22px solid #994a28;
+  top: -1.5rem;
+  right: -1.5rem;
+}
+.card_band .square_white {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 0 0.375rem 0 0;
+  width: 4.25rem;
+  height: 4.25rem;
+  left: -1.5rem;
+  top: 0.125rem;
 }
 .card_band .card_band_rotate {
   position: absolute;
-  bottom: 22%;
-  left: -20%;
+  bottom: 0.625rem;
+  left: -0.625rem;
   transform: rotate(-135deg);
   width: 8rem;
   height: 5.625rem;
   border-left: 22px solid transparent;
   border-top: 22px solid #e85e23;
   border-right: 22px solid transparent;
-  border-bottom: 22px solid #ffffff;
+  border-bottom: 22px solid transparent;
 }
 .card_band .card_band_value {
   position: absolute;
@@ -1238,7 +1250,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.875rem;
 }
 
 .wrapper_title_card {
@@ -1369,13 +1381,13 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 @media screen and (min-width: 48rem) {
   .portfolio .carousel__slide {
-    width: var(--carousel-slide-width, 70%);
+    width: var(--carousel-slide-width, 68%);
   }
 }
 @media screen and (min-width: 80rem) {
   .portfolio .carousel__slide {
     padding: 1rem;
-    width: var(--carousel-slide-width, 40%);
+    width: var(--carousel-slide-width, 30%);
   }
 }
 
@@ -1392,6 +1404,12 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 .portfolio_subtitle {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 80rem) {
+  .slide_img {
+    min-width: 24.5rem;
+  }
 }
 
 .carousel_subtitle {
@@ -1417,6 +1435,11 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   line-height: 1.5rem;
   color: #c4c4c4;
   margin-left: 75%;
+}
+@media screen and (min-width: 80rem) {
+  .carousel_number {
+    margin-left: 43%;
+  }
 }
 
 #myCarousel {
@@ -1448,7 +1471,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 @media screen and (min-width: 80rem) {
   .carousel .carousel__button.is-prev {
-    left: 71%;
+    left: 41%;
   }
 }
 .carousel .carousel__button.is-next {
@@ -1472,7 +1495,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 @media screen and (min-width: 80rem) {
   .carousel .carousel__button.is-next {
-    right: 18.5%;
+    right: 53.5%;
   }
 }
 .carousel .carousel__button.is-prev,
@@ -1563,9 +1586,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   color: #c4c4c4;
 }
 
-.carousel_reviews .carousel_number {
-  color: #111111;
-}
 @media screen and (min-width: 48rem) {
   .carousel_reviews .carousel_number {
     margin-left: 64%;
@@ -1605,7 +1625,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 @media screen and (min-width: 80rem) {
   .carousel_reviews .carousel__button.is-prev {
-    left: 71%;
+    left: 72%;
   }
 }
 .carousel_reviews .carousel__button.is-next {
@@ -1685,17 +1705,15 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+.button_accordion.border_top_none {
+  border-top: none;
+}
 @media screen and (min-width: 80rem) {
   .button_accordion {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 2rem 0 0 0;
   }
-}
-
-.active_accordion,
-.button_accordion :focus {
-  border: 0;
 }
 
 .button_accordion:after {

@@ -99,6 +99,7 @@
 }
 
 .card {
+  position: relative;
   display: grid;
   gap: rem(24);
   padding: rem(24);
@@ -117,7 +118,7 @@
 }
 
 .card_band {
-  position: relative;
+  position: absolute;
   width: rem(90);
   height: rem(90);
   border-left: 22px solid #994a28;
@@ -125,17 +126,30 @@
   border-right: 22px solid transparent;
   border-bottom: 22px solid #994a28;
 
+  top: rem(-24);
+  right: rem(-24);
+
+  .square_white {
+    position: absolute;
+    background-color: $white;
+    border-radius: 0 rem(6) 0 0;
+    width: rem(68);
+    height: rem(68);
+    left: rem(-24);
+    top: rem(2);
+  }
+
   .card_band_rotate {
     position: absolute;
-    bottom: 22%;
-    left: -20%;
+    bottom: rem(10);
+    left: rem(-10);
     transform: rotate(-135deg);
     width: rem(128);
     height: rem(90);
     border-left: 22px solid transparent;
     border-top: 22px solid $accent_color;
     border-right: 22px solid transparent;
-    border-bottom: 22px solid $white;
+    border-bottom: 22px solid transparent;
   }
 
   .card_band_value {
@@ -146,7 +160,7 @@
     color: $white;
     font-weight: 700;
     font-size: rem(16);
-    line-height: rem(32);
+    line-height: rem(30);
   }
 }
 
