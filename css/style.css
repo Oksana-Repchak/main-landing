@@ -1178,6 +1178,34 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   }
 }
 
+.card_band {
+  position: relative;
+  width: 5.625rem;
+  height: 5.625rem;
+  border-left: 22px solid #994a28;
+  border-top: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 22px solid #994a28;
+}
+.card_band .card_band_rotate {
+  position: absolute;
+  bottom: 22%;
+  left: -20%;
+  transform: rotate(-135deg);
+  width: 8rem;
+  height: 5.625rem;
+  border-left: 22px solid transparent;
+  border-top: 22px solid #e85e23;
+  border-right: 22px solid transparent;
+  border-bottom: 22px solid #ffffff;
+}
+.card_band .card_band_value {
+  position: absolute;
+  transform: rotate(-180deg);
+  top: -50%;
+  left: 20%;
+}
+
 .wrapper_title_card {
   display: grid;
   gap: 1rem;
@@ -1246,6 +1274,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   background-color: #e85e23;
   padding: 0.75rem 3.5rem;
   justify-self: center;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .card_button:hover, .card_button:focus {
   color: #e85e23;

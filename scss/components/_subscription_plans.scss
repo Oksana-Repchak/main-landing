@@ -116,6 +116,36 @@
   }
 }
 
+.card_band {
+  position: relative;
+  width: rem(90);
+  height: rem(90);
+  border-left: 22px solid #994a28;
+  border-top: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 22px solid #994a28;
+
+  .card_band_rotate {
+    position: absolute;
+    bottom: 22%;
+    left: -20%;
+    transform: rotate(-135deg);
+    width: rem(128);
+    height: rem(90);
+    border-left: 22px solid transparent;
+    border-top: 22px solid $accent_color;
+    border-right: 22px solid transparent;
+    border-bottom: 22px solid $white;
+  }
+
+  .card_band_value {
+    position: absolute;
+    transform: rotate(-180deg);
+    top: -50%;
+    left: 20%;
+  }
+}
+
 .wrapper_title_card {
   display: grid;
   gap: rem(16);
@@ -189,6 +219,8 @@
   background-color: $accent_color;
   padding: rem(12) rem(56);
   justify-self: center;
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
 
   &:hover,
   &:focus {
