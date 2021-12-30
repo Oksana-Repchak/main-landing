@@ -61,3 +61,55 @@ section {
 .invers_text {
   color: #fff;
 }
+
+.add_before_pattern {
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url("./../images/pattern_hero1.png");
+    filter: blur(6px);
+    transform: rotate(82.58deg);
+    width: rem(474);
+    height: rem(530);
+    bottom: -50%;
+
+    @media screen and (min-width: rem($tablet)) {
+      bottom: -70%;
+    }
+    @media screen and (min-width: rem($desktop)) {
+      width: rem(800);
+      height: rem(900);
+      filter: blur(10px);
+    }
+  }
+}
+
+.add_after_pattern {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: rem(800);
+    height: rem(900);
+    background-image: url("./../images/pattern_hero2.png");
+    bottom: 40%;
+    left: 0;
+
+    filter: blur(10px);
+    transform: rotate(82.58deg);
+
+    @media screen and (min-width: rem($tablet)) {
+      left: 45%;
+    }
+    @media screen and (min-width: rem($desktop)) {
+      left: 75%;
+    }
+  }
+}

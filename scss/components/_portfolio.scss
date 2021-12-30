@@ -1,8 +1,11 @@
 .portfolio {
+  position: relative;
   overflow: hidden;
   background-color: $black;
 
   .container {
+    position: relative;
+    z-index: 10;
     padding: 0 0 0 rem(20);
 
     @media screen and (min-width: rem($tablet)) {

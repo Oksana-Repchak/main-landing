@@ -256,6 +256,59 @@ section {
   color: #fff;
 }
 
+.add_before_pattern::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url("./../images/pattern_hero1.png");
+  filter: blur(6px);
+  transform: rotate(82.58deg);
+  width: 29.625rem;
+  height: 33.125rem;
+  bottom: -50%;
+}
+@media screen and (min-width: 48rem) {
+  .add_before_pattern::before {
+    bottom: -70%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .add_before_pattern::before {
+    width: 50rem;
+    height: 56.25rem;
+    filter: blur(10px);
+  }
+}
+
+.add_after_pattern::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 50rem;
+  height: 56.25rem;
+  background-image: url("./../images/pattern_hero2.png");
+  bottom: 40%;
+  left: 0;
+  filter: blur(10px);
+  transform: rotate(82.58deg);
+}
+@media screen and (min-width: 48rem) {
+  .add_after_pattern::after {
+    left: 45%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .add_after_pattern::after {
+    left: 75%;
+  }
+}
+
 .text_12 {
   font-size: 0.75rem;
   line-height: 1.25rem;
@@ -792,9 +845,13 @@ section {
 }
 
 .contact_us {
+  position: relative;
+  overflow: hidden;
   background-color: #111111;
 }
 .contact_us .container {
+  position: relative;
+  z-index: 10;
   display: grid;
   gap: 2rem;
 }
@@ -809,6 +866,8 @@ section {
 }
 
 .wrapper_form {
+  position: relative;
+  z-index: 10;
   display: grid;
   gap: 2rem;
 }
@@ -1307,10 +1366,13 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .portfolio {
+  position: relative;
   overflow: hidden;
   background-color: #111111;
 }
 .portfolio .container {
+  position: relative;
+  z-index: 10;
   padding: 0 0 0 1.25rem;
 }
 @media screen and (min-width: 48rem) {
