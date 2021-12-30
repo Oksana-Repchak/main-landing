@@ -183,6 +183,7 @@
 .adaptation_link_previous {
   color: $accent_color;
   padding: rem(12) rem(20);
+  transition: color $transition, background-color $transition;
 
   @media screen and (min-width: rem($tablet)) {
     padding: rem(12) rem(48);
@@ -194,13 +195,13 @@
     color: $white;
   }
 
-  &::before {
-    content: "";
-    background-image: url("./../images/arrow_left.svg");
-    display: inline-block;
-    width: rem(24);
-    height: rem(24);
+  .arrow_left {
     margin-right: rem(16);
+    transition: stroke $transition;
+  }
+
+  &:hover .arrow_left path {
+    stroke: $white;
   }
 }
 
@@ -208,22 +209,26 @@
   color: $white;
   background-color: $accent_color;
   padding: rem(12) rem(32);
+  transition: color $transition, background-color $transition;
+
   @media screen and (min-width: rem($tablet)) {
     padding: rem(12) rem(48);
   }
 
-  &:hover,
-  :focus {
+  &:hover {
     color: $accent_color;
     background-color: $white;
   }
 
-  &::after {
-    content: "";
-    background-image: url("./../images/arrow_next_w.svg");
-    display: inline-block;
-    width: rem(24);
-    height: rem(24);
+  .arrow_next {
     margin-left: rem(16);
+    transition: stroke $transition, fill $transition;
+  }
+
+  &:hover .arrow_next path {
+    stroke: $accent_color;
+  }
+  &:hover .arrow_next rect {
+    fill: $accent_color;
   }
 }

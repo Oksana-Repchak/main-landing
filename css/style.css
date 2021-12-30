@@ -263,23 +263,24 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  background-image: url("./../images/pattern_hero1.png");
-  filter: blur(6px);
-  transform: rotate(82.58deg);
+  background-image: url("./../images/pattern.png");
+  filter: blur(4px);
+  transform: rotate(80deg);
   width: 29.625rem;
   height: 33.125rem;
   bottom: -50%;
 }
 @media screen and (min-width: 48rem) {
   .add_before_pattern::before {
-    bottom: -70%;
+    bottom: -40%;
+    left: -25%;
   }
 }
 @media screen and (min-width: 80rem) {
   .add_before_pattern::before {
     width: 50rem;
     height: 56.25rem;
-    filter: blur(10px);
+    left: -20%;
   }
 }
 
@@ -292,20 +293,22 @@ section {
   display: block;
   width: 50rem;
   height: 56.25rem;
-  background-image: url("./../images/pattern_hero2.png");
-  bottom: 40%;
+  background-image: url("./../images/pattern.png");
+  filter: blur(2px);
+  bottom: 33%;
   left: 0;
-  filter: blur(10px);
   transform: rotate(82.58deg);
 }
 @media screen and (min-width: 48rem) {
   .add_after_pattern::after {
-    left: 45%;
+    left: 65%;
+    bottom: -40%;
   }
 }
 @media screen and (min-width: 80rem) {
   .add_after_pattern::after {
-    left: 75%;
+    bottom: 10%;
+    left: 70%;
   }
 }
 
@@ -463,6 +466,37 @@ section {
   padding-bottom: 5.625rem;
   background-color: #111111;
 }
+.hero.add_before_pattern::before {
+  left: -20%;
+  bottom: 30%;
+}
+@media screen and (min-width: 48rem) {
+  .hero.add_before_pattern::before {
+    bottom: -40%;
+  }
+}
+.hero.add_after_pattern::after {
+  width: 36.25rem;
+  height: 36.25rem;
+  bottom: 0;
+  left: 20%;
+  transform: rotate(-20deg);
+}
+@media screen and (min-width: 48rem) {
+  .hero.add_after_pattern::after {
+    bottom: 15%;
+    left: 60%;
+    transform: rotate(8.12deg);
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero.add_after_pattern::after {
+    width: 75rem;
+    height: 75rem;
+    bottom: -45%;
+    left: 55%;
+  }
+}
 @media screen and (min-width: 48rem) {
   .hero {
     padding-top: 1.5rem;
@@ -481,68 +515,6 @@ section {
 @media screen and (min-width: 48rem) {
   .hero .container.container_hero {
     gap: 3.5rem;
-  }
-}
-.hero::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  top: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 33.5rem;
-  height: 37.5rem;
-  background-image: url("./../images/pattern_hero1.png");
-  filter: blur(10px);
-  transform: rotate(82.58deg);
-  top: -10%;
-  left: -15%;
-}
-@media screen and (min-width: 48rem) {
-  .hero::before {
-    top: 40%;
-    left: -10%;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .hero::before {
-    width: 50rem;
-    height: 56.25rem;
-    transform: rotate(80deg);
-    top: 30%;
-    left: -5%;
-  }
-}
-.hero::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: block;
-  width: 35.625rem;
-  height: 36.75rem;
-  background-image: url("./../images/pattern_hero2.png");
-  top: 20%;
-  left: 0;
-  filter: blur(2px);
-  transform: rotate(8.12deg);
-}
-@media screen and (min-width: 48rem) {
-  .hero::after {
-    top: 20%;
-    left: 30%;
-    filter: blur(2px);
-  }
-}
-@media screen and (min-width: 80rem) {
-  .hero::after {
-    width: 73.75rem;
-    height: 73.75rem;
-    top: -10%;
-    left: 42%;
-    transform: rotate(-20deg);
   }
 }
 
@@ -1809,6 +1781,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 
 .section_404 {
   position: relative;
+  overflow: hidden;
   padding: 14.375rem 0;
 }
 @media screen and (min-width: 48rem) {
@@ -1833,60 +1806,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 @media screen and (min-width: 80rem) {
   .section_404 .container {
     gap: 2.5rem;
-  }
-}
-.section_404::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  min-width: 33.5rem;
-  min-height: 37.5rem;
-  background-image: url(./../images/404_befor.png);
-  filter: blur(10px);
-  left: -13.25rem;
-  bottom: 21.25rem;
-}
-@media screen and (min-width: 48rem) {
-  .section_404::before {
-    top: 20.25rem;
-    right: 25rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .section_404::before {
-    min-width: 50.25rem;
-    min-height: 56.25rem;
-  }
-}
-.section_404::after {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-image: url(./../images/pattern_hero2.png);
-  min-width: 35.625rem;
-  min-height: 36.75rem;
-  filter: blur(7px);
-  left: -12.875rem;
-  bottom: -0.75rem;
-}
-@media screen and (min-width: 48rem) {
-  .section_404::after {
-    min-width: 75rem;
-    min-height: 35.625rem;
-    left: -25rem;
-    bottom: 18.5rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .section_404::after {
-    min-height: 38.75rem;
-    left: 68.75rem;
   }
 }
 
@@ -2135,6 +2054,7 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 .adaptation_link_previous {
   color: #e85e23;
   padding: 0.75rem 1.25rem;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 @media screen and (min-width: 48rem) {
   .adaptation_link_previous {
@@ -2146,37 +2066,38 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   background-color: #e85e23;
   color: #ffffff;
 }
-.adaptation_link_previous::before {
-  content: "";
-  background-image: url("./../images/arrow_left.svg");
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+.adaptation_link_previous .arrow_left {
   margin-right: 1rem;
+  transition: stroke 0.2s ease-in-out;
+}
+.adaptation_link_previous:hover .arrow_left path {
+  stroke: #ffffff;
 }
 
 .adaptation_link_next {
   color: #ffffff;
   background-color: #e85e23;
   padding: 0.75rem 2rem;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 @media screen and (min-width: 48rem) {
   .adaptation_link_next {
     padding: 0.75rem 3rem;
   }
 }
-.adaptation_link_next:hover,
-.adaptation_link_next :focus {
+.adaptation_link_next:hover {
   color: #e85e23;
   background-color: #ffffff;
 }
-.adaptation_link_next::after {
-  content: "";
-  background-image: url("./../images/arrow_next_w.svg");
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+.adaptation_link_next .arrow_next {
   margin-left: 1rem;
+  transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+.adaptation_link_next:hover .arrow_next path {
+  stroke: #e85e23;
+}
+.adaptation_link_next:hover .arrow_next rect {
+  fill: #e85e23;
 }
 
 .payment {

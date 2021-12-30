@@ -70,20 +70,21 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
-    background-image: url("./../images/pattern_hero1.png");
-    filter: blur(6px);
-    transform: rotate(82.58deg);
+    background-image: url("./../images/pattern.png");
+    filter: blur(4px);
+    transform: rotate(80deg);
     width: rem(474);
     height: rem(530);
     bottom: -50%;
 
     @media screen and (min-width: rem($tablet)) {
-      bottom: -70%;
+      bottom: -40%;
+      left: -25%;
     }
     @media screen and (min-width: rem($desktop)) {
       width: rem(800);
       height: rem(900);
-      filter: blur(10px);
+      left: -20%;
     }
   }
 }
@@ -98,18 +99,19 @@ section {
     display: block;
     width: rem(800);
     height: rem(900);
-    background-image: url("./../images/pattern_hero2.png");
-    bottom: 40%;
+    background-image: url("./../images/pattern.png");
+    filter: blur(2px);
+    bottom: 33%;
     left: 0;
-
-    filter: blur(10px);
     transform: rotate(82.58deg);
 
     @media screen and (min-width: rem($tablet)) {
-      left: 45%;
+      left: 65%;
+      bottom: -40%;
     }
     @media screen and (min-width: rem($desktop)) {
-      left: 75%;
+      bottom: 10%;
+      left: 70%;
     }
   }
 }

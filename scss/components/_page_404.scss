@@ -1,5 +1,6 @@
 .section_404 {
   position: relative;
+  overflow: hidden;
   padding: rem(230) 0;
 
   @media screen and (min-width: rem($tablet)) {
@@ -18,60 +19,6 @@
     }
     @media screen and (min-width: rem($desktop)) {
       gap: rem(40);
-    }
-  }
-
-  &::before {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: inline-block;
-    min-width: rem(536);
-    min-height: rem(600);
-    background-image: url(./../images/404_befor.png);
-    filter: blur(10px);
-
-    left: rem(-212);
-    bottom: rem(340);
-
-    @media screen and (min-width: rem($tablet)) {
-      top: rem(324);
-      right: rem(400);
-    }
-    @media screen and (min-width: rem($desktop)) {
-      min-width: rem(804);
-      min-height: rem(900);
-      //   top: rem(380);
-      //   right: rem(400);
-    }
-  }
-
-  &::after {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-image: url(./../images/pattern_hero2.png);
-    min-width: rem(570);
-    min-height: rem(588);
-    filter: blur(7px);
-
-    left: rem(-206);
-    bottom: rem(-12);
-
-    @media screen and (min-width: rem($tablet)) {
-      min-width: rem(1200);
-      min-height: rem(570);
-      left: rem(-400);
-      bottom: rem(296);
-    }
-    @media screen and (min-width: rem($desktop)) {
-      min-height: rem(620);
-      left: rem(1100);
     }
   }
 }

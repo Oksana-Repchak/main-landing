@@ -6,6 +6,37 @@
   padding-bottom: rem(90);
   background-color: $black;
 
+  &.add_before_pattern {
+    &::before {
+      left: -20%;
+      bottom: 30%;
+      @media screen and (min-width: rem($tablet)) {
+        bottom: -40%;
+      }
+    }
+  }
+  &.add_after_pattern {
+    &::after {
+      width: rem(580);
+      height: rem(580);
+      bottom: 0;
+      left: 20%;
+      transform: rotate(-20deg);
+
+      @media screen and (min-width: rem($tablet)) {
+        bottom: 15%;
+        left: 60%;
+        transform: rotate(8.12deg);
+      }
+      @media screen and (min-width: rem($desktop)) {
+        width: rem(1200);
+        height: rem(1200);
+        bottom: -45%;
+        left: 55%;
+      }
+    }
+  }
+
   @media screen and (min-width: rem($tablet)) {
     padding-top: rem(24);
     padding-bottom: rem(72);
@@ -24,63 +55,63 @@
     }
   }
 
-  &::before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    top: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: rem(536);
-    height: rem(600);
-    background-image: url("./../images/pattern_hero1.png");
-    filter: blur(10px);
-    transform: rotate(82.58deg);
-    top: -10%;
-    left: -15%;
+  // &::before {
+  //   position: absolute;
+  //   z-index: -1;
+  //   content: "";
+  //   top: 0;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   display: inline-block;
+  //   width: rem(536);
+  //   height: rem(600);
+  //   background-image: url("./../images/pattern.png");
+  //   filter: blur(10px);
+  //   transform: rotate(82.58deg);
+  //   top: -10%;
+  //   left: -15%;
 
-    @media screen and (min-width: rem($tablet)) {
-      top: 40%;
-      left: -10%;
-    }
-    @media screen and (min-width: rem($desktop)) {
-      width: rem(800);
-      height: rem(900);
-      transform: rotate(80deg);
-      top: 30%;
-      left: -5%;
-    }
-  }
+  //   @media screen and (min-width: rem($tablet)) {
+  //     top: 40%;
+  //     left: -10%;
+  //   }
+  //   @media screen and (min-width: rem($desktop)) {
+  //     width: rem(800);
+  //     height: rem(900);
+  //     transform: rotate(80deg);
+  //     top: 30%;
+  //     left: -5%;
+  //   }
+  // }
 
-  &::after {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: block;
-    width: rem(570);
-    height: rem(588);
-    background-image: url("./../images/pattern_hero2.png");
-    top: 20%;
-    left: 0;
-    filter: blur(2px);
-    transform: rotate(8.12deg);
+  // &::after {
+  //   position: absolute;
+  //   z-index: -1;
+  //   content: "";
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   display: block;
+  //   width: rem(570);
+  //   height: rem(588);
+  //   background-image: url("./../images/pattern.png");
+  //   top: 20%;
+  //   left: 0;
+  //   filter: blur(2px);
+  //   transform: rotate(8.12deg);
 
-    @media screen and (min-width: rem($tablet)) {
-      top: 20%;
-      left: 30%;
-      filter: blur(2px);
-    }
-    @media screen and (min-width: rem($desktop)) {
-      width: rem(1180);
-      height: rem(1180);
-      top: -10%;
-      left: 42%;
-      transform: rotate(-20deg);
-    }
-  }
+  //   @media screen and (min-width: rem($tablet)) {
+  //     top: 20%;
+  //     left: 30%;
+  //     filter: blur(2px);
+  //   }
+  //   @media screen and (min-width: rem($desktop)) {
+  //     width: rem(1180);
+  //     height: rem(1180);
+  //     top: -10%;
+  //     left: 42%;
+  //     transform: rotate(-20deg);
+  //   }
+  // }
 }
 
 .hero_title {
