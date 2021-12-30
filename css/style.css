@@ -1202,8 +1202,12 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 .card_band .card_band_value {
   position: absolute;
   transform: rotate(-180deg);
-  top: -50%;
-  left: 20%;
+  top: -57%;
+  left: 25%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .wrapper_title_card {

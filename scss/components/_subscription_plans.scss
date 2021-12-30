@@ -141,8 +141,12 @@
   .card_band_value {
     position: absolute;
     transform: rotate(-180deg);
-    top: -50%;
-    left: 20%;
+    top: -57%;
+    left: 25%;
+    color: $white;
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(32);
   }
 }
 
