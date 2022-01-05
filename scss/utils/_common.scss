@@ -61,6 +61,7 @@ section {
 
 .add_before_pattern {
   &::before {
+    z-index: -1;
     position: absolute;
     z-index: 1;
     content: "";
@@ -88,6 +89,7 @@ section {
 
 .add_after_pattern {
   &::after {
+    z-index: -1;
     position: absolute;
     z-index: 1;
     content: "";

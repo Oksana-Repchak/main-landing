@@ -252,6 +252,7 @@ section {
 }
 
 .add_before_pattern::before {
+  z-index: -1;
   position: absolute;
   z-index: 1;
   content: "";
@@ -280,6 +281,7 @@ section {
 }
 
 .add_after_pattern::after {
+  z-index: -1;
   position: absolute;
   z-index: 1;
   content: "";
@@ -462,6 +464,7 @@ section {
   background-color: #111111;
 }
 .hero.add_before_pattern::before {
+  z-index: -1;
   left: -20%;
   bottom: 30%;
 }
@@ -471,6 +474,7 @@ section {
   }
 }
 .hero.add_after_pattern::after {
+  z-index: -1;
   width: 36.25rem;
   height: 36.25rem;
   bottom: 0;
@@ -1752,14 +1756,23 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   display: grid;
   gap: 2.5rem;
 }
+@media screen and (max-width: 47.875rem) {
+  .footer .container {
+    text-align: center;
+    justify-items: center;
+  }
+}
 
 .footer_wrapper {
   display: grid;
+  gap: 2.5rem;
 }
 @media screen and (min-width: 48rem) {
   .footer_wrapper {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8.5rem;
+    column-gap: 5rem;
+    row-gap: 2.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -1772,10 +1785,33 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 47.875rem) {
+  .link_logo {
+    justify-self: center;
+  }
+}
+
+.header_logo_img.footer_logo {
+  max-width: 10rem;
+}
+@media screen and (min-width: 48rem) {
+  .header_logo_img.footer_logo {
+    max-width: 12.5rem;
+  }
+}
+
 .title_footer_wrapper {
   display: grid;
   gap: 1rem;
   align-content: start;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.875rem) {
+  .title_footer_wrapper {
+    justify-self: end;
+  }
+  .title_footer_wrapper.justify_self_start {
+    justify-self: start;
+  }
 }
 
 .info_list {
@@ -1790,7 +1826,20 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 
 .button_footer {
   align-self: start;
-  justify-self: center;
+  justify-self: end;
+  display: none;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.875rem) {
+  .button_footer {
+    display: block;
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .button_footer {
+    display: block;
+  }
 }
 
 .footer_copyright {
@@ -2139,6 +2188,11 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 
 .item_link {
   font-weight: 700;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+.item_link.active {
+  color: #e85e23;
+  text-decoration: underline;
 }
 .item_link:hover,
 .item_link :focus {

@@ -17,6 +17,13 @@
 
 .item_link {
   font-weight: 700;
+  transition: color $transition, text-decoration $transition;
+
+  &.active {
+    color: $accent_color;
+    text-decoration: underline;
+  }
+
   &:hover,
   :focus {
     color: $accent_color;

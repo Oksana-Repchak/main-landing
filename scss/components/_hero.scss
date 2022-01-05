@@ -8,6 +8,7 @@
 
   &.add_before_pattern {
     &::before {
+      z-index: -1;
       left: -20%;
       bottom: 30%;
       @media screen and (min-width: rem($tablet)) {
@@ -17,6 +18,7 @@
   }
   &.add_after_pattern {
     &::after {
+      z-index: -1;
       width: rem(580);
       height: rem(580);
       bottom: 0;
