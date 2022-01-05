@@ -208,6 +208,7 @@ h4 {
 
 section {
   padding: 4rem 0 4rem 0;
+  z-index: 1;
 }
 @media screen and (min-width: 80rem) {
   section {
@@ -254,7 +255,6 @@ section {
 .add_before_pattern::before {
   z-index: -1;
   position: absolute;
-  z-index: 1;
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
@@ -283,7 +283,6 @@ section {
 .add_after_pattern::after {
   z-index: -1;
   position: absolute;
-  z-index: 1;
   content: "";
   background-size: contain;
   background-repeat: no-repeat;

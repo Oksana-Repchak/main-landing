@@ -18,6 +18,7 @@ h4 {
 
 section {
   padding: rem(64) 0 rem(64) 0;
+  z-index: 1;
 
   @media screen and (min-width: rem($desktop)) {
     padding: rem(160) 0 rem(160) 0;
@@ -63,7 +64,6 @@ section {
   &::before {
     z-index: -1;
     position: absolute;
-    z-index: 1;
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
@@ -91,7 +91,6 @@ section {
   &::after {
     z-index: -1;
     position: absolute;
-    z-index: 1;
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
