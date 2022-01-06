@@ -1095,6 +1095,9 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   display: block;
 }
 
+.subscription_plans {
+  overflow: hidden;
+}
 .subscription_plans .container {
   display: grid;
   gap: 4rem;
@@ -1751,10 +1754,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   padding: 2.5rem 0 2.5rem 0;
   background-color: #111111;
 }
-.footer .container {
-  display: grid;
-  gap: 2.5rem;
-}
 @media screen and (max-width: 47.875rem) {
   .footer .container {
     text-align: center;
@@ -1763,20 +1762,15 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 }
 
 .footer_wrapper {
-  display: grid;
+  display: flex;
   gap: 2.5rem;
+  flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
   .footer_wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5rem;
-    row-gap: 2.5rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .footer_wrapper {
-    grid-auto-flow: column;
   }
 }
 .footer_wrapper .footer_title {
@@ -1786,7 +1780,8 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
 
 @media screen and (max-width: 47.875rem) {
   .link_logo {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1804,14 +1799,6 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   gap: 1rem;
   align-content: start;
 }
-@media screen and (min-width: 48rem) and (max-width: 79.875rem) {
-  .title_footer_wrapper {
-    justify-self: end;
-  }
-  .title_footer_wrapper.justify_self_start {
-    justify-self: start;
-  }
-}
 
 .info_list {
   display: grid;
@@ -1823,26 +1810,9 @@ input:invalid:not(:placeholder-shown) + .form_error_mark {
   gap: 0.5rem;
 }
 
-.button_footer {
-  align-self: start;
-  justify-self: end;
-  display: none;
-}
-@media screen and (min-width: 48rem) and (max-width: 79.875rem) {
-  .button_footer {
-    display: block;
-    grid-row-start: 1;
-    grid-column-start: 2;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .button_footer {
-    display: block;
-  }
-}
-
 .footer_copyright {
   text-align: center;
+  grid-column: 1/4;
 }
 
 .section_404 {

@@ -3,9 +3,6 @@
   background-color: $black;
 
   .container {
-    display: grid;
-    gap: rem(40);
-
     @media screen and (max-width: rem($tablet - 2)) {
       text-align: center;
       justify-items: center;
@@ -14,16 +11,14 @@
 }
 
 .footer_wrapper {
-  display: grid;
+  display: flex;
   gap: rem(40);
+  flex-direction: column;
   @media screen and (min-width: rem($tablet)) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: rem(80);
-    row-gap: rem(40);
-  }
-  @media screen and (min-width: rem($desktop)) {
-    grid-auto-flow: column;
   }
 
   .footer_title {
@@ -34,7 +29,8 @@
 
 .link_logo {
   @media screen and (max-width: rem($tablet - 2)) {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -53,13 +49,14 @@
   gap: rem(16);
   align-content: start;
 
-  @media screen and (min-width: rem($tablet)) and (max-width: rem($desktop - 2)) {
-    justify-self: end;
-    &.justify_self_start {
-      justify-self: start;
-    }
-  }
+  // @media screen and (min-width: rem($tablet)) and (max-width: rem($desktop - 2)) {
+  //   justify-self: end;
+  //   &.justify_self_start {
+  //     justify-self: start;
+  //   }
+  // }
 }
+
 .info_list {
   display: grid;
   gap: rem(8);
@@ -70,21 +67,7 @@
   gap: rem(8);
 }
 
-.button_footer {
-  align-self: start;
-  justify-self: end;
-  display: none;
-
-  @media screen and (min-width: rem($tablet)) and (max-width: rem($desktop - 2)) {
-    display: block;
-    grid-row-start: 1;
-    grid-column-start: 2;
-  }
-  @media screen and (min-width: rem($desktop)) {
-    display: block;
-  }
-}
-
 .footer_copyright {
   text-align: center;
+  grid-column: 1/4;
 }
